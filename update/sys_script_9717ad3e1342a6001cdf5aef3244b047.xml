@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_message_tran_message_translator_table</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Translate Messages</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+var msgCount = 0;
+var dupCount = 0;
+	
+var gr = new GlideRecord('sys_ui_message');
+gr.addQuery('language', 'en');
+gr.setLimit(2);                          //Limit 1 for testing
+gr.query();
+while (gr.next()) {
+	translateRec(gr);
+    msgCount++;
+  }
+gs.addInfoMessage(msgCount + ' messages translated');
+if (dupCount > 0) {
+	gs.addInfoMessage(dupCount + ' duplicate records skipped');
+}
+//action.setRedirectURL(current);
+
+	function translateRec(currRec) {
+	 var gt = new global.GoogleTranslate();
+     var trMessage = gt.translate("fr", currRec.message, "en");   //convert message
+
+	  var newRec = new GlideRecord('sys_ui_message');
+	  newRec.initialize();
+	  newRec.key = currRec.key;
+	  newRec.application = currRec.application;
+	  newRec.language = 'frX';   // language 'X' until approved
+	  newRec.sys_customer_update = 'true';
+//	  newRec.message = trMessage;
+	  newRec.message = "this is my sample message";
+	 try {
+//      checkForDupe(newRec);
+	  newRec.insert();	 
+	 }
+	 catch(err) {
+		 dupCount++;
+	 } 
+		
+}
+
+
+
+ 
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-09-27 17:17:44</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9717ad3e1342a6001cdf5aef3244b047</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Translate Messages</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+        <sys_update_name>sys_script_9717ad3e1342a6001cdf5aef3244b047</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-09-28 07:13:53</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=9717ad3e1342a6001cdf5aef3244b047"/>
+</record_update>

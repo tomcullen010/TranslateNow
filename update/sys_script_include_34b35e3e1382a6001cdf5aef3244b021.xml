@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_snc_message_tran.GoogleTranslate</api_name>
+        <client_callable>true</client_callable>
+        <description>Example usage: &#13;
+Translate&#13;
+   var gt = new GoogleTranslate;&#13;
+   gt.translate('ja','hello', 'en');&#13;
+		&#13;
+sourceLanguage defaults to property set&#13;
+targetLanguage is required&#13;
+srcText is required</description>
+        <name>GoogleTranslate</name>
+        <script><![CDATA[var GoogleTranslate = Class.create();
+GoogleTranslate.prototype = {
+	initialize: function() {
+		this.gDebug = gs.getProperty('google.translate.debug');
+		this.logSource = "GoogleTranslate";
+	},
+	
+	translate: function(targetLanguage, srcText, sourceLanguage) {
+		if(arguments.length == 2) {
+			targetLanguage = sourceLanguage + '';
+			sourceLanguage = gs.getProperty("google.translate.default.language", "en") + '';
+		}
+		
+		if(!this._isValid(targetLanguage) || !this._isValid(srcText)) {
+			return;
+		}
+		
+		var apiKey = this._getApiKey();		
+		var response = this._translateText(sourceLanguage, srcText, targetLanguage, apiKey);
+		var translatedText = this._parseTranslatedTextResponse(response);
+		return translatedText;
+	},
+	
+	_isValid : function (value) {
+		if(typeof value == 'undefined' || value == null || value == ''){
+			return false;
+		}
+		return true;
+	},
+	
+	_getApiKey : function() {
+		var apiKey = gs.getProperty("google.translate.api.key") + '';
+		if (apiKey == "") {
+			this._log("There was no API key, please check the Google Translate properties page");
+			return;
+		}
+		return apiKey;
+	},
+	
+	_translateText : function(sourceLanguage, srcText, targetLanguage, apiKey) {
+		
+		//Make our rest call
+		var r = new RESTMessage('GoogleTranslate', 'get');
+		r.setStringParameter('sourceLanguage', sourceLanguage + '');
+		r.setStringParameter('sourceText', srcText + '');
+		r.setStringParameter('targetLanguage', targetLanguage + '');
+		r.setStringParameter('googleApiKey', apiKey + '');
+		var response = r.execute();
+		//End making our rest call
+		
+		return response;
+	},
+	
+	_parseTranslatedTextResponse : function(response) {
+		var json = new JSON();
+		var obj = json.decode(response.getBody());
+		if (this.gDebug == 'true') {
+			gs.log("DEBUG: Google Translate Body is: " + response.getBody(), this.type);
+			gs.log("DEBUG: Google Translate Error Code is: " + response.getErrorCode() + " with an error message of " + response.getErrorMessage(), this.logSource);
+		}
+		var returnString = obj.data.translations[0].translatedText;
+		return returnString + '';
+	},
+	
+	_log : function(message) {
+		if(this.gDebug == 'true') {
+			gs.log(message, this.type);
+		}
+		else {
+			gs.print(message, this.type);
+		}
+	},
+	
+	type: 'GoogleTranslate'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-09-27 19:47:07</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>34b35e3e1382a6001cdf5aef3244b021</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>GoogleTranslate</sys_name>
+        <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+        <sys_update_name>sys_script_include_34b35e3e1382a6001cdf5aef3244b021</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-09-28 07:34:06</sys_updated_on>
+    </sys_script_include>
+</record_update>

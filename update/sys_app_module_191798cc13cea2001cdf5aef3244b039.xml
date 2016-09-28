@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Message Translator">581798cc13cea2001cdf5aef3244b008</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint>Translate messages from English to another Active language</hint>
+        <homepage/>
+        <image/>
+        <link_type>NEW</link_type>
+        <map_page/>
+        <mobile_title>Message Translator Table</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_snc_message_tran_message_translator_table</name>
+        <order>100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>https://tcullsc2.service-now.com/nav_to.do?uri=%2Fx_snc_message_tran_message_translator_table.do%3Fsys_id%3D6cf65d941386e2001cdf5aef3244b0a0%26sysparm_record_target%3Dx_snc_message_tran_message_translator_table%26sysparm_record_row%3D1%26sysparm_record_rows%3D2%26sysparm_record_list%3DORDERBYnumber</query>
+        <report/>
+        <roles>x_snc_message_tran.user,admin</roles>
+        <survey/>
+        <survey_overwrite>true</survey_overwrite>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-09-18 21:37:58</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>191798cc13cea2001cdf5aef3244b039</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Translate Messages</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+        <sys_update_name>sys_app_module_191798cc13cea2001cdf5aef3244b039</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-09-26 19:50:14</sys_updated_on>
+        <timeline_page/>
+        <title>Translate Messages</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>
