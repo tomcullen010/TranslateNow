@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_process_flow">
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_message_tran_message_translator_table">state=Translating^ORstate=ready_for_review^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="Translating"/>
+            <item endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="ready_for_review"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description><![CDATA[<p>Translation phase.</p>]]></description>
+        <label>Translation</label>
+        <name>translation</name>
+        <order>20</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>dave.knight</sys_created_by>
+        <sys_created_on>2016-09-30 13:21:39</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9d4858bf1342e6001cdf5aef3244b095</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>translation</sys_name>
+        <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+        <sys_update_name>sys_process_flow_9d4858bf1342e6001cdf5aef3244b095</sys_update_name>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-02 16:54:16</sys_updated_on>
+        <table>x_snc_message_tran_message_translator_table</table>
+    </sys_process_flow>
+</record_update>

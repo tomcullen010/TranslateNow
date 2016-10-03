@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_message_tran.TranslatorAjax</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>TranslatorAjax</name>
+        <script><![CDATA[var TranslatorAjax = Class.create();
+TranslatorAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	getTranslationTableInfo: function () {
+		
+		
+		var tblName = this.getParameter('sysparm_table_name');
+		var tblLabel = this.getParameter('sysparm_table_label');
+		//gs.include("TranslatorUtils");
+		//var tUtils = new TranslatorUtils();
+		//var tblInfoForReturn = tUtils.getTranslationTableStats(tblName, tblLabel);
+		var tblInfoForReturn = new TranslatorUtils().getTranslationTableStats(tblName, tblLabel);
+		return tblInfoForReturn;
+		
+	},
+	
+	previewTranslationRun: function () {
+		
+		var tableName = this.getParameter('sysparm_table_name');
+		var tblLabel = this.getParameter('sysparm_table_label');
+		var conditions = this.getParameter('sysparm_conditions');
+		
+		msgCount = 0;
+		var gr = new GlideAggregate(tableName);
+		gr.addQuery('language', 'en'); // TODO - pick google translate system default
+		gr.addEncodedQuery(conditions);
+		gr.addAggregate('COUNT');
+		gr.query();                                          // loop thru the messages to select
+		if (gr.next())
+			msgCount = gr.getAggregate('COUNT');
+		
+		return msgCount + " '" + tblLabel + "' records will be selected for translation";
+	}
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>dave.knight</sys_created_by>
+        <sys_created_on>2016-10-01 14:27:58</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>638f6d0813d6e6001cdf5aef3244b082</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>TranslatorAjax</sys_name>
+        <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+        <sys_update_name>sys_script_include_638f6d0813d6e6001cdf5aef3244b082</sys_update_name>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-02 16:45:52</sys_updated_on>
+    </sys_script_include>
+</record_update>

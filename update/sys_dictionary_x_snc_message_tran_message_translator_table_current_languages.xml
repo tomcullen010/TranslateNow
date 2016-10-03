@@ -14,7 +14,7 @@
         <choice>2</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Translate To Language</column_label>
+        <column_label>Translate to language</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -55,15 +55,15 @@
         <sys_created_on>2016-09-18 21:42:38</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>2237d8cc13cea2001cdf5aef3244b0bb</sys_id>
-        <sys_mod_count>9</sys_mod_count>
-        <sys_name>Translate To Language</sys_name>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Translate to language</sys_name>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_message_tran_message_translator_table_current_languages</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-09-27 17:30:39</sys_updated_on>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-02 15:40:33</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

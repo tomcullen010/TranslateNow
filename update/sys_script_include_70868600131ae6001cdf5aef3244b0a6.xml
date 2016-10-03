@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_message_tran.TranslatorUtils</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TranslatorUtils</name>
+        <script><![CDATA[var TranslatorUtils = Class.create();
+TranslatorUtils.prototype = {
+	initialize: function() {
+	},
+	
+	getTranslationTableStats: function (tableName, tableLabel) {
+		
+		// Assumes tableName is an i18n table (i.e. it has a language field)
+		// Returns a status string
+		
+		var languageAccounting = '';
+		var returnString = '';
+		var languageCount = 0;
+		var totalMessageCount = 0;
+		var defaulLangMessageCount = 0;
+		
+		// Display Language counts for the selected table
+		var count = new GlideAggregate(tableName);
+		
+		count.addAggregate('COUNT', 'language');
+		count.query();
+		while (count.next()) {
+			var language = count.language;
+			var lName = new GlideRecord('sys_language');   //lookup lanugage name
+			if (lName.get('id', language) || language == 'en') {
+				
+				languageCount++;
+				
+				// Filter out any unreviewed messages, which will have an undefined language id.
+				if(language == 'en') {
+					lName.name = "English";
+				}
+				
+				var messageCount = count.getAggregate('COUNT', 'language');
+				if ("English" == lName.name) 
+					defaulLangMessageCount = messageCount;
+				totalMessageCount += parseInt(messageCount);
+				if (languageCount > 1) {
+					languageAccounting += ',';
+				}
+				languageAccounting += " " + messageCount + " " + lName.name + " (" + language + ")";
+				
+			}
+			returnString = "There are currently " + totalMessageCount + " messages in the '" + tableLabel + "' table:" + languageAccounting +".\n";
+			
+		}
+		var custom = new GlideAggregate(tableName);
+		custom.addQuery('language', 'en');
+		//	custom.addQuery('sys_customer_update', 'true');
+		custom.addQuery('sys_updated_on', '>=', gs.daysAgo(30));
+		custom.addAggregate('COUNT');
+		custom.query();
+		var messages = 0;
+		if (custom.next())
+			messages = custom.getAggregate('COUNT');
+		
+		returnString += messages + " English messages have been updated in the last 30 days.\n";
+		returnString += "All " + defaulLangMessageCount + " English records are selected for translation.";
+		return returnString;
+	},
+	
+	type: 'TranslatorUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>dave.knight</sys_created_by>
+        <sys_created_on>2016-10-01 16:07:36</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>70868600131ae6001cdf5aef3244b0a6</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>TranslatorUtils</sys_name>
+        <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+        <sys_update_name>sys_script_include_70868600131ae6001cdf5aef3244b0a6</sys_update_name>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-02 17:42:19</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -7,7 +7,7 @@
         <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>false</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -29,30 +29,11 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
-	// Display Message counts and Custom Message Counts
-	var count = new GlideAggregate('sys_ui_message');
-	count.addAggregate('COUNT', 'language');
-	count.query();   
-	while (count.next()) {
-	   var language = count.language;
-	   var languageCount = count.getAggregate('COUNT', 'language');
-	   gs.addInfoMessage("There are currently " + languageCount + " messages with a language of " + language);
-	   current.message_log = current.message_log + "  There are currently " + languageCount + " messages with a language of " + language;
-}
-    var custom = new GlideAggregate('sys_ui_message');
-	custom.addQuery('language', 'en');
-	custom.addQuery('sys_customer_update', 'true');
-	custom.addAggregate('COUNT');
-	custom.query();
-	var messages = 0;
-	if (custom.next()) { 
-	   messages = custom.getAggregate('COUNT');  
-	   current.custom_messages = messages;
-	} else {
-	   current.custom_messages = 0;
-	}
-
+	
+// 	var tableName = current.translation_tables;
+// 	var tableLabel = current.getDisplayValue('translation_tables');
+// 	current.message_log = new TranslatorUtils().getTranslationTableStats(tableName, tableLabel);
+	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -61,7 +42,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>62c2a91813c6e2001cdf5aef3244b08d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>Load Message Information field</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -69,8 +50,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_62c2a91813c6e2001cdf5aef3244b08d</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-09-27 12:07:58</sys_updated_on>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-03 01:11:43</sys_updated_on>
         <template/>
         <when>before_display</when>
     </sys_script>

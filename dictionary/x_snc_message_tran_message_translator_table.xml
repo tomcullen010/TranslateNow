@@ -1,28 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="Message Translator Log" max_length="40" name="x_snc_message_tran_message_translator_table" type="collection">
+    <element label="Message Translator" max_length="40" name="x_snc_message_tran_message_translator_table" type="collection">
         <element choice="1" label="Applications" max_length="40" name="applications" reference="sys_ui_message" reference_key="Application" type="reference">
             <choice/>
         </element>
         <element label="As of Date" max_length="40" name="as_of_date" type="glide_date"/>
-        <element choice="2" label="Translate To Language" mandatory="true" max_length="40" name="current_languages" reference="sys_language" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
+        <element dependent="translation_tables" dependent_on_field="translation_tables" hint="Filter the list of records to translate" label="Conditions" max_length="4000" name="conditions" type="conditions" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Condition buffer" max_length="1000" name="condition_buffer" type="string"/>
+        <element choice="2" hint="Select a language for tranlation.  The system default will be used as the &quot;from&quot; language" label="Translate to language" mandatory="true" max_length="40" name="current_languages" reference="sys_language" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
             <choice/>
         </element>
-        <element hint="Number of messages created outside of the plugin messages" label="Custom Message Count" max_length="40" name="custom_messages" read_only="true" type="integer"/>
-        <element label="Google Translate API Key" max_length="40" name="google_translate_api_key" read_only="true" type="string"/>
+        <element hint="Number of messages created or modified outside of the plugin messages" label="Custom Message Count" max_length="40" name="custom_messages" read_only="true" type="integer"/>
+        <element hint="Google API Key" label="Google Translate API Key" max_length="40" name="google_translate_api_key" read_only="true" type="string"/>
         <element label="Google Translate (From) Language" max_length="40" name="google_translate_from_language" read_only="true" type="string"/>
-        <element hint="To Activate a language plugin, select the language via Lookup.  Once selected, you can use the record edit to activate the plugin." label="Activate Languages" max_length="32" name="inactive_languages" reference="v_plugin" reference_qual="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" reference_qual_condition="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" type="reference"/>
-        <element label="Message Log" max_length="500" name="message_log" read_only="true" type="string"/>
+        <element hint="To Activate a language plugin, select the language via Lookup.  Once selected, you can use the record edit to activate the plugin." label="Activate a Language" max_length="32" name="inactive_languages" reference="v_plugin" reference_qual="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" reference_qual_condition="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" type="reference"/>
+        <element default="Please select a table to translate, and a language to translate to." label="Status  log" max_length="800" name="message_log" read_only="true" type="string"/>
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Process Time" max_length="40" name="process_time" type="glide_duration"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Pending" label="Result" max_length="40" name="result" read_only="true" type="string">
+            <choice>
+                <element label="Pending" sequence="0" value="Pending"/>
+                <element label="Success" sequence="1" value="Success"/>
+                <element label="Error" sequence="2" value="Error"/>
+            </choice>
+        </element>
+        <element choice="3" default="This Week" label="Search as of Date" max_length="40" name="search_as_of_date" type="glide_date">
+            <choice>
+                <element hint="include today's changes only" label="Today" sequence="0" value="beginningOfToday()"/>
+                <element hint="Changes made this week" label="This Week" sequence="1" value="beginningOfThisWeek()"/>
+                <element hint="Changes made this month" label="This Month" sequence="2" value="beginningOfThisMonth()"/>
+                <element hint="Changes made this quarter" label="This Quarter" sequence="3" value="beginningOfThisQuarter()"/>
+                <element hint="Changes made this past year" label="1 Year" sequence="4" value="yearsAgo(1)"/>
+                <element label="All Time" sequence="5" value="yearsAgo(10)"/>
+            </choice>
+        </element>
         <element label="Search Description" max_length="40" name="search_description" type="string"/>
         <element label="Search Language" max_length="40" name="search_language" type="string"/>
         <element label="Search Property" max_length="40" name="search_property" type="string"/>
-        <element label="System Default Language" max_length="40" name="system_default_language" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Configure" label="State" max_length="40" name="state" read_only="true" type="string">
+            <choice>
+                <element label="Configure" sequence="0" value="Configure"/>
+                <element label="Translating" sequence="1" value="Translating"/>
+                <element label="Ready for review" sequence="2" value="ready_for_review"/>
+                <element label="Review" sequence="3" value="Review"/>
+                <element label="Complete" sequence="4" value="Complete"/>
+            </choice>
+        </element>
+        <element hint="The default language for the google translation API" label="Translate from language" max_length="40" name="system_default_language" read_only="true" type="string"/>
         <element label="Translated Message Count" max_length="40" name="translated_message_count" type="integer"/>
         <element label="Translation End" max_length="40" name="translation_end" type="glide_date_time"/>
         <element label="Translation Start" max_length="40" name="translation_start" type="glide_date_time"/>
+        <element choice="1" hint="Select table for record translation" label="Table to translate" mandatory="true" max_length="40" name="translation_tables" type="string">
+            <choice>
+                <element label="Message" sequence="0" value="sys_ui_message"/>
+                <element label="Translated Name / Field" sequence="1" value="sys_translated"/>
+                <element label="Field Label" sequence="2" value="sys_documentation"/>
+                <element label="Choice" sequence="3" value="sys_choice"/>
+                <element label="Translated Text" sequence="4" value="sys_translated_text"/>
+            </choice>
+        </element>
         <element default="true" label="Update Custom Messages Only" max_length="40" name="update_custom_messages_only" type="boolean"/>
+        <element label="Working Table" max_length="40" name="working_table" read_only="true" type="string"/>
         <index name="index">
             <element name="inactive_languages"/>
         </index>

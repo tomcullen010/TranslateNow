@@ -7,7 +7,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>false</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -30,49 +30,153 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 	
-var msgCount = 0;
-var dupCount = 0;
+	//
+	// Pulled from the UI Action. Added a try/catch
+	//
 	
-var gr = new GlideRecord('sys_ui_message');
-gr.addQuery('language', 'en');
-gr.setLimit(2);                          //Limit 1 for testing
-gr.query();
-while (gr.next()) {
-	translateRec(gr);
-    msgCount++;
-  }
-gs.addInfoMessage(msgCount + ' messages translated');
-if (dupCount > 0) {
-	gs.addInfoMessage(dupCount + ' duplicate records skipped');
+	var msgCount = 0;
+	var dupCount = 0;
+	var toLanguage = current.current_languages.id;
+	var toLanguageX = toLanguage + "_" + current.sys_id;
+	
+	
+	translateTableData();
+	new global.TranslatorHelper().sleepTimer(5000); // TEST
+	current.state = "Review";
+	current.setWorkflow(false);
+	
+	gs.addInfoMessage(msgCount + ' messages translated');
+	current.message_log =  msgCount + " messages translated from English to " + toLanguage;
+	current.update();
+	
+	function translateTableData() {
+		var gr = new GlideRecord(current.translation_tables);
+		gr.addQuery('language', 'en');
+		gr.addEncodedQuery(current.condition_buffer);
+		gr.query();                                          // loop thru the messages to tranlate
+		while (gr.next()) {
+			if (!translationExists(gr, toLanguage)) {
+				translateRec(gr, toLanguage, toLanguageX);
+				msgCount++;
+			}
+		}
+	}
+	
+})(current, previous);
+
+
+
+
+function translationExists(currRec, toLanguage) {
+	return false;
 }
-//action.setRedirectURL(current);
 
-	function translateRec(currRec) {
-	 var gt = new global.GoogleTranslate();
-     var trMessage = gt.translate("fr", currRec.message, "en");   //convert message
-
-	  var newRec = new GlideRecord('sys_ui_message');
-	  newRec.initialize();
-	  newRec.key = currRec.key;
-	  newRec.application = currRec.application;
-	  newRec.language = 'frX';   // language 'X' until approved
-	  newRec.sys_customer_update = 'true';
-//	  newRec.message = trMessage;
-	  newRec.message = "this is my sample message";
-	 try {
-//      checkForDupe(newRec);
-	  newRec.insert();	 
-	 }
-	 catch(err) {
-		 dupCount++;
-	 } 
+function translateRec(currRec, toLanguage, toLanguageX) {
+	try {
 		
+		//
+		// Required field translations...
+		//
+		//   Messages (sys_ui_message) - message
+		//   Translated Name/Fields (sys_translated) - label
+		//   Field Labels (sys_documentation) - label, plural, help, hint
+		//   Choices (sys_choice) - label, hint
+		//   Translated Texts (sys_translated_text) - value
+		//
+		// All 5 translation records use the same language field - language
+		//
+		
+		var gt = new global.GoogleTranslate();
+		var abort = false;
+		
+		switch (current.translation_tables.toString()) {
+			case "sys_ui_message":
+			currRec.message = translate(toLanguage, currRec.message, "en");
+			break;
+			case "sys_translated":
+			currRec.label = translate(toLanguage, currRec.label, "en");
+			break;
+			case "sys_documentation":
+			currRec.label = translate(toLanguage, currRec.label, "en");
+			currRec.plural = translate(toLanguage, currRec.plural, "en");
+			currRec.help = translate(toLanguage, currRec.help, "en");
+			currRec.hint = translate(toLanguage, currRec.hint, "en");
+			break;
+			case "sys_choice":
+			currRec.label = translate(toLanguage, currRec.label, "en");
+			currRec.hint = translate(toLanguage, currRec.hint, "en");
+			break;
+			case "sys_translated_text":
+			currRec.value = translate(toLanguage, currRec.value, "en");
+			break;
+			default:
+			abort = true;
+			gs.error("Unknown translation table type: " + current.translation_tables);
+			break;
+		}
+		
+		if (!abort) {
+			currRec.language = toLanguageX;
+			var newRec = currRec.insert();
+		}
+		
+	}
+	catch (error) {
+		gs.error(error);
+	}
 }
 
 
 
- 
-})(current, previous);]]></script>
+function translate() {
+	
+	return "All work and no play makes Dave a dull boy.";
+	
+}
+
+// var msgCount = 0;
+// var dupCount = 0;
+
+// var gr = new GlideRecord('sys_ui_message');
+// gr.addQuery('language', 'en');
+// gr.setLimit(2);                          //Limit 1 for testing
+// gr.query();
+// while (gr.next()) {
+	// 	translateRec(gr);
+	// 	msgCount++;
+	// }
+	// gs.addInfoMessage(msgCount + ' messages translated');
+	// if (dupCount > 0) {
+		// 	gs.addInfoMessage(dupCount + ' duplicate records skipped');
+		// }
+		// //action.setRedirectURL(current);
+		
+		// function translateRec(currRec) {
+			// 	var gt = new global.GoogleTranslate();
+			// 	var trMessage = gt.translate("fr", currRec.message, "en");   //convert message
+			
+			// 	var newRec = new GlideRecord('sys_ui_message');
+			// 	newRec.initialize();
+			// 	newRec.key = currRec.key;
+			// 	newRec.application = currRec.application;
+			// 	newRec.language = 'frX';   // language 'X' until approved
+			// 	newRec.sys_customer_update = 'true';
+			// 	//	  newRec.message = trMessage;
+			// 	newRec.message = "this is my sample message";
+			// 	try {
+				// 		//      checkForDupe(newRec);
+				// 		newRec.insert();
+				// 	}
+				// 	catch(err) {
+					// 		dupCount++;
+					// 	}
+					
+					// }
+					
+					
+					
+					
+					]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2016-09-27 17:17:44</sys_created_on>
@@ -80,7 +184,7 @@ if (dupCount > 0) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9717ad3e1342a6001cdf5aef3244b047</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name>Translate Messages</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -88,10 +192,10 @@ if (dupCount > 0) {
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_9717ad3e1342a6001cdf5aef3244b047</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-09-28 07:13:53</sys_updated_on>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-03 02:12:40</sys_updated_on>
         <template/>
-        <when>after</when>
+        <when>async</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=9717ad3e1342a6001cdf5aef3244b047"/>
 </record_update>

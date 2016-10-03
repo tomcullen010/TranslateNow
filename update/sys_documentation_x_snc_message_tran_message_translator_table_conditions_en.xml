@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="conditions" label="Conditions" language="en" table="x_snc_message_tran_message_translator_table">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>conditions</element>
+            <help>Filter the list of records to translate</help>
+            <hint>Filter the list of records to translate</hint>
+            <label>Conditions</label>
+            <language>en</language>
+            <name>x_snc_message_tran_message_translator_table</name>
+            <plural>Conditions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-09-28 13:36:19</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>2fb84a4f1386a6001cdf5aef3244b037</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Conditions</sys_name>
+            <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_message_tran_message_translator_table_conditions_en</sys_update_name>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-02 15:43:33</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

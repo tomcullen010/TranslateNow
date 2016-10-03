@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>TranslationCleanup</name>
+        <run_once>true</run_once>
+        <script><![CDATA[var gr = new GlideRecord("sys_ui_message");
+gr.addQuery("message", "All work and no play makes Dave a dull boy.");
+gr.query();
+gr.deleteMultiple();
+
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>dave.knight</sys_created_by>
+        <sys_created_on>2016-10-02 20:43:37</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>0a80d06c139ee6001cdf5aef3244b030</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TranslationCleanup</sys_name>
+        <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+        <sys_update_name>sys_script_fix_0a80d06c139ee6001cdf5aef3244b030</sys_update_name>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-02 20:43:37</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

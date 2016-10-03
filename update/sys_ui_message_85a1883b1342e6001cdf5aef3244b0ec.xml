@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_ui_message">
     <sys_ui_message action="INSERT_OR_UPDATE">
-        <application>Government</application>
-        <key>Four Score and seven years ago our fathers ...</key>
-        <language>frX</language>
-        <message>il y a sept ans, nos pères Four Score et ...</message>
+        <application/>
+        <key>Tom Cullen</key>
+        <language>fr</language>
+        <message>Tom Cullen</message>
         <sys_class_name>sys_ui_message</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2016-09-28 07:55:29</sys_created_on>
+        <sys_created_on>2016-09-30 11:41:31</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
-        <sys_id>3eba3cc71346a6001cdf5aef3244b0f2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Four Score and seven years ago our fathers ...</sys_name>
+        <sys_id>85a1883b1342e6001cdf5aef3244b0ec</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Tom Cullen</sys_name>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
-        <sys_update_name>sys_ui_message_3eba3cc71346a6001cdf5aef3244b0f2</sys_update_name>
+        <sys_update_name>sys_ui_message_85a1883b1342e6001cdf5aef3244b0ec</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-09-28 07:55:29</sys_updated_on>
+        <sys_updated_on>2016-09-30 11:44:38</sys_updated_on>
     </sys_ui_message>
 </record_update>

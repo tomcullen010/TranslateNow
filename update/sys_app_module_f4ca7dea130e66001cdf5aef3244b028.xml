@@ -7,7 +7,7 @@
         <content_page/>
         <device_type/>
         <filter/>
-        <hint>List of preapproved translated messages (have suffix = X)</hint>
+        <hint>List of auto-translated messages in need of review and approval (have suffix = X)</hint>
         <homepage/>
         <image/>
         <link_type>LIST</link_type>
@@ -29,18 +29,18 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f4ca7dea130e66001cdf5aef3244b028</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Review Translated Messages</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Unreviewed Translations</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_app_module_f4ca7dea130e66001cdf5aef3244b028</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-09-26 23:20:53</sys_updated_on>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-02 15:21:41</sys_updated_on>
         <timeline_page/>
-        <title>Review Translated Messages</title>
+        <title>Unreviewed Translations</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

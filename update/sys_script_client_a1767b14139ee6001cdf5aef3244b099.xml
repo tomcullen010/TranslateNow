@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>conditions</field>
+        <global>true</global>
+        <messages/>
+        <name>Update Status Log on Condition Change</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '' || newValue == oldValue) {
+		return;
+	}
+	
+	g_form.setValue('message_log', ' ');
+	
+	var name = g_form.getValue('translation_tables'); // NOT a sys_id, the DB table name
+	var conditions = g_form.getValue("conditions");
+	var el = g_form.getElement('translation_tables');
+	var label = el.options[el.selectedIndex].innerHTML;
+	
+	var ga = new GlideAjax('TranslatorAjax');
+	ga.addParam('sysparm_name', 'previewTranslationRun');
+	ga.addParam('sysparm_table_name', name);
+	ga.addParam('sysparm_table_label', label);
+	ga.addParam('sysparm_conditions', conditions);
+	ga.getXML(processPreviewResponse);
+	
+}
+
+function processPreviewResponse(response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	g_form.setValue('message_log', answer);
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>dave.knight</sys_created_by>
+        <sys_created_on>2016-10-02 18:48:06</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a1767b14139ee6001cdf5aef3244b099</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Update Status Log on Condition Change</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+        <sys_update_name>sys_script_client_a1767b14139ee6001cdf5aef3244b099</sys_update_name>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-02 21:28:05</sys_updated_on>
+        <table>x_snc_message_tran_message_translator_table</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
