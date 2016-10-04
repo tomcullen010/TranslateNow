@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="TC Test Element" table="x_snc_message_tran_message_translator_table" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>TC Test Element</element>
+            <hint>All work and no play makes Dave a dull boy.</hint>
+            <inactive>false</inactive>
+            <label>All work and no play makes Dave a dull boy.</label>
+            <language>fr</language>
+            <name>x_snc_message_tran_message_translator_table</name>
+            <sequence/>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0854f08513dee600d70550f82244b06e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
+            <value>This is my test element!</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>TC Test Element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TC Test Element</label>
+            <language>en</language>
+            <name>x_snc_message_tran_message_translator_table</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-10-04 11:49:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fd892441131a2a001cdf5aef3244b07d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-10-04 11:49:26</sys_updated_on>
+            <value>This is my test element!</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>TC Test Element</element>
+            <name>x_snc_message_tran_message_translator_table</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-10-04 11:49:26</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>84d92441131a2a001cdf5aef3244b080</sys_id>
+            <sys_mod_count>8</sys_mod_count>
+            <sys_name>TC Test Element</sys_name>
+            <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+            <sys_update_name>sys_choice_x_snc_message_tran_message_translator_table_TC Test Element</sys_update_name>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

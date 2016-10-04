@@ -36,30 +36,45 @@
 	
 	var msgCount = 0;
 	var dupCount = 0;
-	var toLanguage = current.current_languages.id;
-	var toLanguageX = toLanguage + "_" + current.sys_id;
+	var toLanguage = current.current_languages.id.toString();
+	var toLanguageX = toLanguage + "_" + current.sys_id.toString();
 	
-	
-	translateTableData();
-	new global.TranslatorHelper().sleepTimer(5000); // TEST
+	try {
+		if (translateTableData())
+			current.result = "Success";
+		else
+			current.result = "Error";
+		
+		new global.TranslatorHelper().sleepTimer(5000); // TEST
+	}
+	catch (err) {
+		
+	}
 	current.state = "Review";
 	current.setWorkflow(false);
+	current.message_log =  msgCount + " messages translated from English to " + toLanguage + ".\n" +
+	"Please review and approve for accuracy.";
+	if (current.result == "Error")
+		current.message_log += "Note however that translations encountered an Error! " +
+	"Have an admin investigate the system logs.";
 	
-	gs.addInfoMessage(msgCount + ' messages translated');
-	current.message_log =  msgCount + " messages translated from English to " + toLanguage;
 	current.update();
 	
 	function translateTableData() {
+		
+		var returnCode = true; // success
 		var gr = new GlideRecord(current.translation_tables);
 		gr.addQuery('language', 'en');
 		gr.addEncodedQuery(current.condition_buffer);
 		gr.query();                                          // loop thru the messages to tranlate
 		while (gr.next()) {
 			if (!translationExists(gr, toLanguage)) {
-				translateRec(gr, toLanguage, toLanguageX);
+				if (!translateRec(gr, toLanguage, toLanguageX))
+					returnCode = false;
 				msgCount++;
 			}
 		}
+		return returnCode;
 	}
 	
 })(current, previous);
@@ -68,10 +83,66 @@
 
 
 function translationExists(currRec, toLanguage) {
+	
+	// Keys that uniquely identify a translation
+	//
+	//   For all, language and ...
+	//
+	//   Messages (sys_ui_message) - key
+	//   Translated Name/Fields (sys_translated) - value
+	//   Field Labels (sys_documentation) - name, element
+	//   Choices (sys_choice) - name, element, value
+	//   Translated Texts (sys_translated_text) - tablename, fieldname, documentkey
+	
+	var abort = false;
+	var searchRec = new GlideRecord(currRec.getRecordClassName());
+	searchRec.addQuery('language', toLanguage);
+	switch (currRec.getRecordClassName()) {
+		case "sys_ui_message":
+		searchRec.addQuery('key', currRec.key);
+		break;
+		case "sys_translated":
+		searchRec.addQuery('value', currRec.value);
+		break;
+		case "sys_documentation":
+		searchRec.addQuery('name', currRec.name);
+		searchRec.addQuery('element', currRec.element);
+		break;
+		case "sys_choice":
+		searchRec.addQuery('name', currRec.name);
+		searchRec.addQuery('element', currRec.element);
+		searchRec.addQuery('value', currRec.value);
+		break;
+		case "sys_translated_text":
+		searchRec.addQuery('fieldname', currRec.fieldname);
+		var query = searchRec.addQuery('documentkey', currRec.documentkey);
+		query.addOrCondition('tablename', currRec.tablename);
+		break;
+		default:
+		abort = true;
+		gs.error("Unknown translation table type: " + current.translation_tables);
+		break;
+	}
+	
+	if (abort) {
+		return true; // stop processing on this error condition
+	}
+	
+	searchRec.query();
+	if (searchRec.hasNext()) {
+		return true;
+	}
+	
 	return false;
+	
 }
 
 function translateRec(currRec, toLanguage, toLanguageX) {
+	
+	gs.info("Translating " + toLanguageX);
+	
+	var returnCode = true;
+	
 	try {
 		
 		//
@@ -90,6 +161,7 @@ function translateRec(currRec, toLanguage, toLanguageX) {
 		var abort = false;
 		
 		switch (current.translation_tables.toString()) {
+			// TODO: make 'from langauge' a variable
 			case "sys_ui_message":
 			currRec.message = translate(toLanguage, currRec.message, "en");
 			break;
@@ -119,11 +191,16 @@ function translateRec(currRec, toLanguage, toLanguageX) {
 			currRec.language = toLanguageX;
 			var newRec = currRec.insert();
 		}
+		else {
+			returnCode = false;
+		}
 		
 	}
 	catch (error) {
+		returnCode = false;
 		gs.error(error);
 	}
+	return returnCode; // Returns true on success, false on any error.
 }
 
 
@@ -184,7 +261,7 @@ function translate() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9717ad3e1342a6001cdf5aef3244b047</sys_id>
-        <sys_mod_count>49</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name>Translate Messages</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -193,7 +270,7 @@ function translate() {
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_9717ad3e1342a6001cdf5aef3244b047</sys_update_name>
         <sys_updated_by>dave.knight</sys_updated_by>
-        <sys_updated_on>2016-10-03 02:12:40</sys_updated_on>
+        <sys_updated_on>2016-10-04 12:34:23</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

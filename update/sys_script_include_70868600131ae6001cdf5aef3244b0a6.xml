@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_snc_message_tran.TranslatorUtils</api_name>
         <client_callable>false</client_callable>
@@ -10,6 +10,51 @@
         <script><![CDATA[var TranslatorUtils = Class.create();
 TranslatorUtils.prototype = {
 	initialize: function() {
+	},
+	
+	isReviewComplete: function (translateRec) {
+
+		var gr = new GlideRecord(translateRec.translation_tables);
+		gr.addQuery('language', 'CONTAINS', translateRec.sys_id);
+		gr.query();
+		if (gr.hasNext()) {
+			return false;
+		}
+		return true;
+		
+	},
+	
+	updateStatusLog: function (translationRecordId, apprCount) {
+		
+	// Update the translation record's status log
+		var translationRec = new GlideRecord("x_snc_message_tran_message_translator_table");
+		if (translationRecordId && translationRec.get(translationRecordId)) {
+			gs.info("Updating log");
+			var logString = translationRec.message_log.toString();
+			if (logString.indexOf("approved") == -1) {
+				gs.info("New update to log");
+				// First time updating the status log.
+				// The word in the indexOf, approved, must be in the new line below
+				var newLine = apprCount + " translations approved.";
+				logString = logString + "\n" + newLine;
+			}
+			else {
+				gs.info("Refresh of log");
+				// The number of approvals MUST BE first on last line
+				var logLines = logString.split("\n");
+				var approvalLogTokenArray = logLines[logLines.length -1].split(" ");
+				var approvalCount = parseInt(approvalLogTokenArray[0]);
+				approvalCount += apprCount;
+				approvalLogTokenArray[0] = approvalCount;
+				var approvalLogString = approvalLogTokenArray.join(" ");
+				logLines[logLines.length -1] = approvalLogString;
+				logString = logLines.join("\n");
+			}
+			translationRec.message_log = logString;
+			translationRec.setWorkflow(false);
+			translationRec.update();
+
+		}
 	},
 	
 	getTranslationTableStats: function (tableName, tableLabel) {
@@ -41,7 +86,7 @@ TranslatorUtils.prototype = {
 				}
 				
 				var messageCount = count.getAggregate('COUNT', 'language');
-				if ("English" == lName.name) 
+				if ("English" == lName.name)
 					defaulLangMessageCount = messageCount;
 				totalMessageCount += parseInt(messageCount);
 				if (languageCount > 1) {
@@ -75,7 +120,7 @@ TranslatorUtils.prototype = {
         <sys_created_on>2016-10-01 16:07:36</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>70868600131ae6001cdf5aef3244b0a6</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>TranslatorUtils</sys_name>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
         <sys_policy>read</sys_policy>
@@ -83,6 +128,6 @@ TranslatorUtils.prototype = {
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_include_70868600131ae6001cdf5aef3244b0a6</sys_update_name>
         <sys_updated_by>dave.knight</sys_updated_by>
-        <sys_updated_on>2016-10-02 17:42:19</sys_updated_on>
+        <sys_updated_on>2016-10-03 19:11:00</sys_updated_on>
     </sys_script_include>
 </record_update>

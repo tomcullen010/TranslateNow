@@ -6,18 +6,18 @@
         <assessment/>
         <content_page/>
         <device_type/>
-        <filter table="sys_ui_message">languageLIKE_^EQ<item endquery="false" field="language" goto="false" newquery="false" operator="LIKE" or="false" value="_"/>
+        <filter table="sys_documentation">languageLIKE_^EQ<item endquery="false" field="language" goto="false" newquery="false" operator="LIKE" or="false" value="_"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter>
-        <hint>List of auto-translated messages in need of review and approval</hint>
+        <hint>List of auto-translated labels in need of review and approval</hint>
         <homepage/>
         <image/>
         <link_type>LIST</link_type>
         <map_page/>
         <mobile_title>Review Translated Messages</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>sys_ui_message</name>
-        <order>200</order>
+        <name>sys_documentation</name>
+        <order>220</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -25,24 +25,24 @@
         <survey/>
         <survey_overwrite>true</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2016-09-26 23:20:53</sys_created_on>
+        <sys_created_by>dave.knight</sys_created_by>
+        <sys_created_on>2016-10-03 19:55:23</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>f4ca7dea130e66001cdf5aef3244b028</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Unreviewed Messages</sys_name>
+        <sys_id>c97f41b813162a001cdf5aef3244b018</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Unreviewed Field Labels</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
-        <sys_update_name>sys_app_module_f4ca7dea130e66001cdf5aef3244b028</sys_update_name>
+        <sys_update_name>sys_app_module_c97f41b813162a001cdf5aef3244b018</sys_update_name>
         <sys_updated_by>dave.knight</sys_updated_by>
-        <sys_updated_on>2016-10-03 19:52:47</sys_updated_on>
+        <sys_updated_on>2016-10-03 19:55:23</sys_updated_on>
         <timeline_page/>
-        <title>Unreviewed Messages</title>
+        <title>Unreviewed Field Labels</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>
