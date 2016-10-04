@@ -18,6 +18,7 @@
             <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2016-09-19 20:09:06</sys_updated_on>
+            <u_translation_log_id/>
             <value>fr</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -37,6 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>dave.knight</sys_updated_by>
             <sys_updated_on>2016-10-04 12:35:17</sys_updated_on>
+            <u_translation_log_id/>
             <value>en</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -56,6 +58,7 @@
             <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2016-09-19 20:09:01</sys_updated_on>
+            <u_translation_log_id/>
             <value>en</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">

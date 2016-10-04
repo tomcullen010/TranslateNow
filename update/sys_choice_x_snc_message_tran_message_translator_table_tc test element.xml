@@ -18,6 +18,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>dave.knight</sys_updated_by>
             <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
+            <u_translation_log_id/>
             <value>This is my test element!</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -37,6 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2016-10-04 11:49:26</sys_updated_on>
+            <u_translation_log_id/>
             <value>This is my test element!</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
