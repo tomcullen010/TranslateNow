@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="Message Translator" max_length="40" name="x_snc_message_tran_message_translator_table" type="collection">
+    <element max_length="40" name="x_snc_message_tran_message_translator_table" type="collection">
         <element choice="1" label="Applications" max_length="40" name="applications" reference="sys_ui_message" reference_key="Application" type="reference">
             <choice/>
         </element>
         <element label="As of Date" max_length="40" name="as_of_date" type="glide_date"/>
-        <element dependent="translation_tables" dependent_on_field="translation_tables" hint="Filter the list of records to translate" label="Conditions" max_length="4000" name="conditions" type="conditions" use_dependent_field="true"/>
+        <element dependent="translation_tables" dependent_on_field="translation_tables" label="Conditions" max_length="4000" name="conditions" type="conditions" use_dependent_field="true"/>
         <element attributes="edge_encryption_enabled=true" label="Condition buffer" max_length="1000" name="condition_buffer" type="string"/>
-        <element choice="2" hint="Select a language for tranlation.  The system default will be used as the &quot;from&quot; language" label="Translate to language" mandatory="true" max_length="40" name="current_languages" reference="sys_language" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
+        <element choice="2" label="Translate to language" mandatory="true" max_length="40" name="current_languages" reference="sys_language" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
             <choice/>
         </element>
         <element hint="Number of messages created or modified outside of the plugin messages" label="Custom Message Count" max_length="40" name="custom_messages" read_only="true" type="integer"/>
@@ -20,28 +20,19 @@
         <element label="Process Time" max_length="40" name="process_time" type="glide_duration"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Pending" label="Result" max_length="40" name="result" read_only="true" type="string">
             <choice>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="0" value="Pending"/>
                 <element label="Pending" sequence="0" value="Pending"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="1" value="Success"/>
                 <element label="Success" sequence="1" value="Success"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="2" value="Error"/>
                 <element label="Error" sequence="2" value="Error"/>
             </choice>
         </element>
         <element choice="3" default="This Week" label="Search as of Date" max_length="40" name="search_as_of_date" type="glide_date">
             <choice>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="0" value="beginningOfToday()"/>
                 <element hint="include today's changes only" label="Today" sequence="0" value="beginningOfToday()"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="1" value="beginningOfThisWeek()"/>
                 <element hint="Changes made this week" label="This Week" sequence="1" value="beginningOfThisWeek()"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="2" value="beginningOfThisMonth()"/>
                 <element hint="Changes made this month" label="This Month" sequence="2" value="beginningOfThisMonth()"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="3" value="beginningOfThisQuarter()"/>
                 <element hint="Changes made this quarter" label="This Quarter" sequence="3" value="beginningOfThisQuarter()"/>
                 <element hint="Changes made this past year" label="1 Year" sequence="4" value="yearsAgo(1)"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="4" value="yearsAgo(1)"/>
                 <element label="All Time" sequence="5" value="yearsAgo(10)"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="5" value="yearsAgo(10)"/>
             </choice>
         </element>
         <element label="Search Description" max_length="40" name="search_description" type="string"/>
@@ -49,31 +40,22 @@
         <element label="Search Property" max_length="40" name="search_property" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Configure" label="State" max_length="40" name="state" read_only="true" type="string">
             <choice>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="0" value="Configure"/>
                 <element label="Configure" sequence="0" value="Configure"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="1" value="Translating"/>
                 <element label="Translating" sequence="1" value="Translating"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="3" value="Review"/>
                 <element label="Review" sequence="3" value="Review"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="4" value="Complete"/>
                 <element label="Complete" sequence="4" value="Complete"/>
             </choice>
         </element>
-        <element hint="The default language for the google translation API" label="Translate from language" max_length="40" name="system_default_language" read_only="true" type="string"/>
+        <element label="Translate from language" max_length="40" name="system_default_language" read_only="true" type="string"/>
         <element label="Translated Message Count" max_length="40" name="translated_message_count" type="integer"/>
         <element label="Translation End" max_length="40" name="translation_end" type="glide_date_time"/>
         <element label="Translation Start" max_length="40" name="translation_start" type="glide_date_time"/>
-        <element choice="1" hint="Select table for record translation" label="Table to translate" mandatory="true" max_length="40" name="translation_tables" type="string">
+        <element choice="1" label="Table to translate" mandatory="true" max_length="40" name="translation_tables" type="string">
             <choice>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="0" value="sys_ui_message"/>
                 <element label="Message" sequence="0" value="sys_ui_message"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="1" value="sys_translated"/>
                 <element label="Translated Name / Field" sequence="1" value="sys_translated"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="2" value="sys_documentation"/>
                 <element label="Field Label" sequence="2" value="sys_documentation"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="3" value="sys_choice"/>
                 <element label="Choice" sequence="3" value="sys_choice"/>
-                <element hint="All work and no play makes Dave a dull boy." label="All work and no play makes Dave a dull boy." language="fr" sequence="4" value="sys_translated_text"/>
                 <element label="Translated Text" sequence="4" value="sys_translated_text"/>
             </choice>
         </element>

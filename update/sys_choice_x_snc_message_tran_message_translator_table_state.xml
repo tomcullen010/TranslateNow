@@ -4,26 +4,6 @@
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>state</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>0</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>0854f08513dee600d70550f82244b06c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
-            <u_translation_log_id/>
-            <value>Configure</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
             <hint/>
             <inactive>false</inactive>
             <label>Configure</label>
@@ -40,26 +20,6 @@
             <sys_updated_on>2016-09-30 05:06:23</sys_updated_on>
             <u_translation_log_id/>
             <value>Configure</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>1</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>0054f08513dee600d70550f82244b06d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
-            <u_translation_log_id/>
-            <value>Translating</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -84,26 +44,6 @@
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>state</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>3</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>0854f08513dee600d70550f82244b06d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
-            <u_translation_log_id/>
-            <value>Review</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
             <hint/>
             <inactive>false</inactive>
             <label>Review</label>
@@ -120,26 +60,6 @@
             <sys_updated_on>2016-10-01 02:53:25</sys_updated_on>
             <u_translation_log_id/>
             <value>Review</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>4</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>0054f08513dee600d70550f82244b06e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
-            <u_translation_log_id/>
-            <value>Complete</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -169,15 +89,15 @@
             <sys_created_on>2016-09-30 05:05:32</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>a0072eaf13cea6001cdf5aef3244b026</sys_id>
-            <sys_mod_count>43</sys_mod_count>
+            <sys_mod_count>47</sys_mod_count>
             <sys_name>state</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
             <sys_update_name>sys_choice_x_snc_message_tran_message_translator_table_state</sys_update_name>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-10-05 07:50:49</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

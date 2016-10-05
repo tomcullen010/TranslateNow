@@ -4,26 +4,6 @@
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>search_as_of_date</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>0</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:17</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>c054304513dee600d70550f82244b09c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:17</sys_updated_on>
-            <u_translation_log_id/>
-            <value>beginningOfToday()</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
             <hint>include today's changes only</hint>
             <inactive>false</inactive>
             <label>Today</label>
@@ -40,26 +20,6 @@
             <sys_updated_on>2016-09-28 14:11:45</sys_updated_on>
             <u_translation_log_id/>
             <value>beginningOfToday()</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>1</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>c854304513dee600d70550f82244b09c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
-            <u_translation_log_id/>
-            <value>beginningOfThisWeek()</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -84,26 +44,6 @@
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>search_as_of_date</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>2</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>c054304513dee600d70550f82244b09d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
-            <u_translation_log_id/>
-            <value>beginningOfThisMonth()</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
             <hint>Changes made this month</hint>
             <inactive>false</inactive>
             <label>This Month</label>
@@ -120,26 +60,6 @@
             <sys_updated_on>2016-09-28 14:11:45</sys_updated_on>
             <u_translation_log_id/>
             <value>beginningOfThisMonth()</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>3</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>0054f08513dee600d70550f82244b06b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
-            <u_translation_log_id/>
-            <value>beginningOfThisQuarter()</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -184,26 +104,6 @@
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>search_as_of_date</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>4</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>0854f08513dee600d70550f82244b06b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
-            <u_translation_log_id/>
-            <value>yearsAgo(1)</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
             <hint/>
             <inactive>false</inactive>
             <label>All Time</label>
@@ -221,26 +121,6 @@
             <u_translation_log_id/>
             <value>yearsAgo(10)</value>
         </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
-            <hint>All work and no play makes Dave a dull boy.</hint>
-            <inactive>false</inactive>
-            <label>All work and no play makes Dave a dull boy.</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>5</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-04 12:35:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>0054f08513dee600d70550f82244b06c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
-            <u_translation_log_id/>
-            <value>yearsAgo(10)</value>
-        </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>search_as_of_date</element>
             <name>x_snc_message_tran_message_translator_table</name>
@@ -249,15 +129,15 @@
             <sys_created_on>2016-09-28 11:20:10</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>899925c31386a6001cdf5aef3244b0bf</sys_id>
-            <sys_mod_count>64</sys_mod_count>
+            <sys_mod_count>70</sys_mod_count>
             <sys_name>search_as_of_date</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
             <sys_update_name>sys_choice_x_snc_message_tran_message_translator_table_search_as_of_date</sys_update_name>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-04 12:35:18</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-10-05 07:50:50</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

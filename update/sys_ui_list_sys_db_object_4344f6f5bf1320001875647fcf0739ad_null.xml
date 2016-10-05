@@ -13,11 +13,11 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-09-19 13:56:04</sys_created_on>
+            <sys_created_on>2016-10-05 06:09:41</sys_created_on>
             <sys_customer_update>true</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>c1f6370c1306e2001cdf5aef3244b045</sys_id>
+            <sys_id>91a5ec19131e2a001cdf5aef3244b083</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>sys_dictionary</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -26,7 +26,7 @@
             <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
             <sys_update_name>sys_ui_list_sys_db_object_4344f6f5bf1320001875647fcf0739ad_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-09-19 13:56:04</sys_updated_on>
+            <sys_updated_on>2016-10-05 06:09:41</sys_updated_on>
             <sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
