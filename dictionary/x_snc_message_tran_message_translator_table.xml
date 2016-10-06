@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element max_length="40" name="x_snc_message_tran_message_translator_table" type="collection">
+    <element attributes="text_index_translations=true" max_length="40" name="x_snc_message_tran_message_translator_table" type="collection">
         <element choice="1" label="Applications" max_length="40" name="applications" reference="sys_ui_message" reference_key="Application" type="reference">
             <choice/>
         </element>
@@ -18,7 +18,7 @@
         <element attributes="edge_encryption_enabled=true" label="Notes" max_length="1000" name="notes" type="string"/>
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Process Time" max_length="40" name="process_time" type="glide_duration"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" default="Pending" label="Result" max_length="40" name="result" read_only="true" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Pending" hint="All work and no play makes Dave a dull boy.  Tom is already dull." label="Result" max_length="40" name="result" read_only="true" type="string">
             <choice>
                 <element label="Pending" sequence="0" value="Pending"/>
                 <element label="Success" sequence="1" value="Success"/>
@@ -27,7 +27,8 @@
         </element>
         <element choice="3" default="This Week" label="Search as of Date" max_length="40" name="search_as_of_date" type="glide_date">
             <choice>
-                <element hint="include today's changes only" label="Today" sequence="0" value="beginningOfToday()"/>
+                <element hint="Je mis à jour cette astuce mercredi matin!" label="Aujourd&amp;#39;hui" language="XX" sequence="0" u_translation_log_id="fr_a882231113126a001cdf5aef3244b04f" value="beginningOfToday()"/>
+                <element hint="I updated this hint on Wednesday AM !" label="Today" sequence="0" value="beginningOfToday()"/>
                 <element hint="Changes made this week" label="This Week" sequence="1" value="beginningOfThisWeek()"/>
                 <element hint="Changes made this month" label="This Month" sequence="2" value="beginningOfThisMonth()"/>
                 <element hint="Changes made this quarter" label="This Quarter" sequence="3" value="beginningOfThisQuarter()"/>
