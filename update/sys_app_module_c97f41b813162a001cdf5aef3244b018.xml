@@ -6,7 +6,8 @@
         <assessment/>
         <content_page/>
         <device_type/>
-        <filter table="sys_documentation">u_transaction_log_idLIKE_^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        <filter table="sys_documentation">u_translation_log_idLIKE_^EQ<item endquery="false" field="u_translation_log_id" goto="false" newquery="false" operator="LIKE" or="false" value="_"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter>
         <hint>List of auto-translated labels in need of review and approval</hint>
         <homepage/>
@@ -30,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c97f41b813162a001cdf5aef3244b018</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Unreviewed Field Labels</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -39,7 +40,7 @@
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_app_module_c97f41b813162a001cdf5aef3244b018</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-10-05 17:04:29</sys_updated_on>
+        <sys_updated_on>2016-10-06 08:26:58</sys_updated_on>
         <timeline_page/>
         <title>Unreviewed Field Labels</title>
         <uncancelable>false</uncancelable>

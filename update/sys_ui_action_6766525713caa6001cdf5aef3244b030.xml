@@ -40,6 +40,9 @@
 function processPreviewResponse(response) {
 	var answer = response.responseXML.documentElement.getAttribute("answer");
 	g_form.setValue('message_log', answer);
+	var answerTokenArray = answer.split(" ");
+	var previewCount = answerTokenArray[0];
+	g_form.setValue('requested_message_count', previewCount);
 }
 ]]></script>
         <show_insert>true</show_insert>
@@ -53,7 +56,7 @@ function processPreviewResponse(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6766525713caa6001cdf5aef3244b030</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>Preview</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -61,8 +64,8 @@ function processPreviewResponse(response) {
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_ui_action_6766525713caa6001cdf5aef3244b030</sys_update_name>
-        <sys_updated_by>dave.knight</sys_updated_by>
-        <sys_updated_on>2016-10-02 16:44:54</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-10-06 11:30:44</sys_updated_on>
         <table>x_snc_message_tran_message_translator_table</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

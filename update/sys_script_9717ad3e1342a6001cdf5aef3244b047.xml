@@ -169,6 +169,7 @@ function translateRec(currRec, toLanguage, toLanguageX) {
 			// TODO: make 'from langauge' a variable
 			case "sys_ui_message":
 			currRec.message = gt.translate(toLanguage, currRec.message, "en");
+			currRec.sys_name = gt.translate(toLanguage, currRec.sys_name, "en");	
 			break;
 			case "sys_translated":
 			currRec.label = gt.translate(toLanguage, currRec.label, "en");
@@ -228,7 +229,7 @@ function translateRec(currRec, toLanguage, toLanguageX) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9717ad3e1342a6001cdf5aef3244b047</sys_id>
-        <sys_mod_count>108</sys_mod_count>
+        <sys_mod_count>109</sys_mod_count>
         <sys_name>Translate Messages</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -237,7 +238,7 @@ function translateRec(currRec, toLanguage, toLanguageX) {
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_9717ad3e1342a6001cdf5aef3244b047</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-10-05 19:53:34</sys_updated_on>
+        <sys_updated_on>2016-10-06 09:12:29</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

@@ -41,6 +41,12 @@
 	// Note that the condition_buffer field has to be on the form for this to work. To keep it hidden,
 	// I'm using a UI Policy.
 	
+	var previewCount = g_form.getIntValue('requested_message_count');
+	if(previewCount < 1) {
+		alert("No Records Previewed, or selected Conditions returned 0 records to Translate.\n \n Please use [Preview] and verify your conditions are met before running [Translate]. ");
+	    return;	
+	}
+	
 	var query = g_form.getValue('conditions');
 	g_form.setValue('condition_buffer', query);
 	gsftSubmit(null, g_form.getFormElement(), "translate_kickoff"); // Needed to kickoff standard UI Action
@@ -66,7 +72,7 @@ function runServerStuff() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>da63e67213c2a6001cdf5aef3244b024</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>64</sys_mod_count>
         <sys_name>Translate</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -74,8 +80,8 @@ function runServerStuff() {
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_ui_action_da63e67213c2a6001cdf5aef3244b024</sys_update_name>
-        <sys_updated_by>dave.knight</sys_updated_by>
-        <sys_updated_on>2016-10-04 13:48:51</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-10-06 12:21:28</sys_updated_on>
         <table>x_snc_message_tran_message_translator_table</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

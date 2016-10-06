@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_documentation element="search_description" label="Search Description" language="en" table="x_snc_message_tran_message_translator_table">
+    <sys_documentation element="duplicate_message_skipped" label="Duplicate Message Skipped" language="en" table="x_snc_message_tran_message_translator_table">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>search_description</element>
+            <element>duplicate_message_skipped</element>
             <help/>
             <hint/>
-            <label>Search Description</label>
+            <label>Duplicate Message Skipped</label>
             <language>en</language>
             <name>x_snc_message_tran_message_translator_table</name>
-            <plural>Search Descriptions</plural>
+            <plural>Duplicate Message Skipped</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-09-19 13:47:01</sys_created_on>
+            <sys_created_on>2016-10-06 08:56:29</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>dce4bbc81306e2001cdf5aef3244b009</sys_id>
+            <sys_id>02655e6d13926a001cdf5aef3244b023</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>Search Description</sys_name>
+            <sys_name>Duplicate Message Skipped</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
-            <sys_update_name>sys_documentation_x_snc_message_tran_message_translator_table_search_description_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_snc_message_tran_message_translator_table_duplicate_message_skipped_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-09-19 13:47:01</sys_updated_on>
+            <sys_updated_on>2016-10-06 08:56:29</sys_updated_on>
             <u_translation_log_id/>
             <url/>
             <url_target/>

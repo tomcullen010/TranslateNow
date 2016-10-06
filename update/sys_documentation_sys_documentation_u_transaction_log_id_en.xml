@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_documentation element="search_as_of_date" label="Search as of Date" language="en" table="x_snc_message_tran_message_translator_table">
+    <sys_documentation element="u_transaction_log_id" label="Transaction Log Id" language="en" table="sys_documentation">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>search_as_of_date</element>
+            <element>u_transaction_log_id</element>
             <help/>
             <hint/>
-            <label>Search as of Date</label>
+            <label>Transaction Log Id</label>
             <language>en</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <plural>Search as of Dates</plural>
+            <name>sys_documentation</name>
+            <plural>Transaction Log Ids</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-09-28 10:47:29</sys_created_on>
+            <sys_created_on>2016-10-06 08:56:28</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>1a12ad431386a6001cdf5aef3244b0fa</sys_id>
+            <sys_id>8e655e6d13926a001cdf5aef3244b01f</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>Search as of Date</sys_name>
+            <sys_name>Transaction Log Id</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
-            <sys_update_name>sys_documentation_x_snc_message_tran_message_translator_table_search_as_of_date_en</sys_update_name>
+            <sys_update_name>sys_documentation_sys_documentation_u_transaction_log_id_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-09-28 10:47:29</sys_updated_on>
+            <sys_updated_on>2016-10-06 08:56:28</sys_updated_on>
             <u_translation_log_id/>
             <url/>
             <url_target/>

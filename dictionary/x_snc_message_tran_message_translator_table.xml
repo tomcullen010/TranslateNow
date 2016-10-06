@@ -4,6 +4,7 @@
         <element choice="1" label="Applications" max_length="40" name="applications" reference="sys_ui_message" reference_key="Application" type="reference">
             <choice/>
         </element>
+        <element label="Approved Message Count" max_length="40" name="approved_message_count" type="integer"/>
         <element label="As of Date" max_length="40" name="as_of_date" type="glide_date"/>
         <element dependent="translation_tables" dependent_on_field="translation_tables" label="Conditions" max_length="4000" name="conditions" type="conditions" use_dependent_field="true"/>
         <element attributes="edge_encryption_enabled=true" label="Condition buffer" max_length="1000" name="condition_buffer" type="string"/>
@@ -11,6 +12,7 @@
             <choice/>
         </element>
         <element hint="Number of messages created or modified outside of the plugin messages" label="Custom Message Count" max_length="40" name="custom_messages" read_only="true" type="integer"/>
+        <element label="Duplicate Message Skipped" max_length="40" name="duplicate_message_skipped" type="integer"/>
         <element hint="Google API Key" label="Google Translate API Key" max_length="40" name="google_translate_api_key" read_only="true" type="string"/>
         <element label="Google Translate (From) Language" max_length="40" name="google_translate_from_language" read_only="true" type="string"/>
         <element hint="To Activate a language plugin, select the language via Lookup.  Once selected, you can use the record edit to activate the plugin." label="Activate a Language" max_length="32" name="inactive_languages" reference="v_plugin" reference_qual="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" reference_qual_condition="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" type="reference"/>
@@ -18,6 +20,7 @@
         <element attributes="edge_encryption_enabled=true" label="Notes" max_length="1000" name="notes" type="string"/>
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Process Time" max_length="40" name="process_time" type="glide_duration"/>
+        <element label="Requested Message Count" max_length="40" name="requested_message_count" type="integer"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Pending" hint="All work and no play makes Dave a dull boy.  Tom is already dull." label="Result" max_length="40" name="result" read_only="true" type="string">
             <choice>
                 <element label="Pending" sequence="0" value="Pending"/>
@@ -25,20 +28,6 @@
                 <element label="Error" sequence="2" value="Error"/>
             </choice>
         </element>
-        <element choice="3" default="This Week" label="Search as of Date" max_length="40" name="search_as_of_date" type="glide_date">
-            <choice>
-                <element hint="Je mis à jour cette astuce mercredi matin!" label="Aujourd&amp;#39;hui" language="XX" sequence="0" u_translation_log_id="fr_a882231113126a001cdf5aef3244b04f" value="beginningOfToday()"/>
-                <element hint="I updated this hint on Wednesday AM !" label="Today" sequence="0" value="beginningOfToday()"/>
-                <element hint="Changes made this week" label="This Week" sequence="1" value="beginningOfThisWeek()"/>
-                <element hint="Changes made this month" label="This Month" sequence="2" value="beginningOfThisMonth()"/>
-                <element hint="Changes made this quarter" label="This Quarter" sequence="3" value="beginningOfThisQuarter()"/>
-                <element hint="Changes made this past year" label="1 Year" sequence="4" value="yearsAgo(1)"/>
-                <element label="All Time" sequence="5" value="yearsAgo(10)"/>
-            </choice>
-        </element>
-        <element label="Search Description" max_length="40" name="search_description" type="string"/>
-        <element label="Search Language" max_length="40" name="search_language" type="string"/>
-        <element label="Search Property" max_length="40" name="search_property" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Configure" label="State" max_length="40" name="state" read_only="true" type="string">
             <choice>
                 <element label="Configure" sequence="0" value="Configure"/>
