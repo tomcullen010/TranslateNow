@@ -33,7 +33,7 @@
         <donut_width_percent>50</donut_width_percent>
         <exp_report_attrs>true</exp_report_attrs>
         <field>state</field>
-        <field_list>number,state,system_default_language,current_languages,translation_tables,message_log,sys_updated_on,sys_updated_by</field_list>
+        <field_list>number,state,translation_tables,current_languages,requested_message_count,duplicate_message_skipped,translated_message_count,message_log,sys_updated_on</field_list>
         <filter table="x_snc_message_tran_message_translator_table">^GROUPBYstate<item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="state"/>
         </filter>
         <from/>
@@ -85,7 +85,7 @@
         <sys_created_on>2016-10-06 08:37:15</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>9801562d13926a001cdf5aef3244b0f3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Translation Status Report</sys_name>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
         <sys_policy/>
@@ -93,7 +93,7 @@
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_report_9801562d13926a001cdf5aef3244b0f3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-10-06 08:37:15</sys_updated_on>
+        <sys_updated_on>2016-10-07 18:53:00</sys_updated_on>
         <table>x_snc_message_tran_message_translator_table</table>
         <title>Translation Status Report</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>

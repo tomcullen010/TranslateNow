@@ -31,16 +31,17 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
 	// Get the System Properties that effect Language
-	var propRec = getProperty('glide.ts.stemming_language');          //Search fields
+	var propRec = getProperty('glide.ts.stemming_language');                //Search fields
     current.search_property = propRec.name;
 	current.search_description = propRec.description;
 	current.search_language = propRec.value;
-	var defRec = getProperty('glide.sys.language');                   //System Default Language
+	var defRec = getProperty('glide.sys.language');                         //System Default Language
 	current.system_default_language = defRec.value;
-	var transRec = getProperty('google.translate.default.language');  //Translate Default Language
+	var transRec = getProperty('google.translate.default.language');        //Translate Default Language
 	current.google_translate_from_language = transRec.value;
-	current.google_translate_api_key = getApiKey();                    // Google Api Key
-	
+	current.google_translate_api_key = getApiKey();                         // Google Api Key
+	var appMaxCount = getProperty('x_snc_message_tran.job.max.record.count');  
+	current.max_translate_count = appMaxCount.value;                              // Max records per translation job
 	
 	
 	function getProperty(propname) {
@@ -69,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>195cab481306e2001cdf5aef3244b0fd</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Get System Language Settings</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -77,8 +78,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_195cab481306e2001cdf5aef3244b0fd</sys_update_name>
-        <sys_updated_by>dave.knight</sys_updated_by>
-        <sys_updated_on>2016-10-02 17:28:12</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-10-07 16:05:25</sys_updated_on>
         <template/>
         <when>before_display</when>
     </sys_script>

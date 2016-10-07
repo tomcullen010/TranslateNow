@@ -4,106 +4,6 @@
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>search_as_of_date</element>
-            <hint>I updated this hint on Wednesday AM !</hint>
-            <inactive>false</inactive>
-            <label>Today</label>
-            <language>en</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>0</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-09-28 11:20:10</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>06c8e5071386a6001cdf5aef3244b0a7</sys_id>
-            <sys_mod_count>3</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-05 08:19:19</sys_updated_on>
-            <u_translation_log_id/>
-            <value>beginningOfToday()</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
-            <hint>Changes made this week</hint>
-            <inactive>false</inactive>
-            <label>This Week</label>
-            <language>en</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>1</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-09-28 11:20:55</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>e799e9071386a6001cdf5aef3244b062</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-09-28 14:11:45</sys_updated_on>
-            <u_translation_log_id/>
-            <value>beginningOfThisWeek()</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
-            <hint>Changes made this month</hint>
-            <inactive>false</inactive>
-            <label>This Month</label>
-            <language>en</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>2</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-09-28 11:22:53</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>a3f9a5071386a6001cdf5aef3244b0bb</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-09-28 14:11:45</sys_updated_on>
-            <u_translation_log_id/>
-            <value>beginningOfThisMonth()</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
-            <hint>Changes made this quarter</hint>
-            <inactive>false</inactive>
-            <label>This Quarter</label>
-            <language>en</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>3</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-09-28 11:25:32</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>f8aa6d071386a6001cdf5aef3244b04c</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-09-28 14:11:45</sys_updated_on>
-            <u_translation_log_id/>
-            <value>beginningOfThisQuarter()</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
-            <hint>Changes made this past year</hint>
-            <inactive>false</inactive>
-            <label>1 Year</label>
-            <language>en</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>4</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-09-28 11:30:27</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>a15b61471386a6001cdf5aef3244b09f</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-09-28 14:11:45</sys_updated_on>
-            <u_translation_log_id/>
-            <value>yearsAgo(1)</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>search_as_of_date</element>
             <hint/>
             <inactive>false</inactive>
             <label>All Time</label>
@@ -128,7 +28,7 @@
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2016-09-28 11:20:10</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>899925c31386a6001cdf5aef3244b0bf</sys_id>
+            <sys_id>4514fc02139a6a001cdf5aef3244b08f</sys_id>
             <sys_mod_count>79</sys_mod_count>
             <sys_name>search_as_of_date</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>

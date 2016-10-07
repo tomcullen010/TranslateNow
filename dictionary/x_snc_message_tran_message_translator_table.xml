@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="text_index_translations=true" max_length="40" name="x_snc_message_tran_message_translator_table" type="collection">
+    <element attributes="text_index_translations=true" label="Message Tran Message Translator Table" max_length="40" name="x_snc_message_tran_message_translator_table" type="collection">
         <element choice="1" label="Applications" max_length="40" name="applications" reference="sys_ui_message" reference_key="Application" type="reference">
             <choice/>
         </element>
@@ -16,24 +16,20 @@
         <element hint="Google API Key" label="Google Translate API Key" max_length="40" name="google_translate_api_key" read_only="true" type="string"/>
         <element label="Google Translate (From) Language" max_length="40" name="google_translate_from_language" read_only="true" type="string"/>
         <element hint="To Activate a language plugin, select the language via Lookup.  Once selected, you can use the record edit to activate the plugin." label="Activate a Language" max_length="32" name="inactive_languages" reference="v_plugin" reference_qual="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" reference_qual_condition="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" type="reference"/>
+        <element hint="Use Admin -&gt; Properties to change this value" label="Max Translate Count" max_length="40" name="max_translate_count" read_only="true" type="integer"/>
         <element default="Please select a table to translate, and a language to translate to." label="Status  log" max_length="800" name="message_log" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Notes" max_length="1000" name="notes" type="string"/>
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Process Time" max_length="40" name="process_time" type="glide_duration"/>
-        <element label="Requested Message Count" max_length="40" name="requested_message_count" type="integer"/>
+        <element label="Requested Message Count" max_length="40" name="requested_message_count" read_only="true" type="integer"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Pending" hint="All work and no play makes Dave a dull boy.  Tom is already dull." label="Result" max_length="40" name="result" read_only="true" type="string">
             <choice>
-                <element label="Pending" sequence="0" value="Pending"/>
-                <element label="Success" sequence="1" value="Success"/>
-                <element label="Error" sequence="2" value="Error"/>
+                <element label="Error" sequence="0" value="Error"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Configure" label="State" max_length="40" name="state" read_only="true" type="string">
             <choice>
-                <element label="Configure" sequence="0" value="Configure"/>
-                <element label="Translating" sequence="1" value="Translating"/>
-                <element label="Review" sequence="3" value="Review"/>
-                <element label="Complete" sequence="4" value="Complete"/>
+                <element label="Complete" sequence="0" value="Complete"/>
             </choice>
         </element>
         <element label="Translate from language" max_length="40" name="system_default_language" read_only="true" type="string"/>
@@ -42,17 +38,24 @@
         <element label="Translation Start" max_length="40" name="translation_start" type="glide_date_time"/>
         <element choice="1" label="Table to translate" mandatory="true" max_length="40" name="translation_tables" type="string">
             <choice>
-                <element label="Message" sequence="0" value="sys_ui_message"/>
-                <element label="Translated Name / Field" sequence="1" value="sys_translated"/>
-                <element label="Field Label" sequence="2" value="sys_documentation"/>
-                <element label="Choice" sequence="3" value="sys_choice"/>
-                <element label="Translated Text" sequence="4" value="sys_translated_text"/>
+                <element hint="Table sys_ui_message" label="messages" language="XX" sequence="0" u_translation_log_id="fr_fa9dc90a139a6a001cdf5aef3244b03c" value="sys_ui_message"/>
+                <element hint="sys_ui_message table" label="Messages" sequence="0" value="sys_ui_message"/>
+                <element hint="sys_choice table" label="Choice" sequence="1" value="sys_choice"/>
+                <element hint="sys_translated table" label="Name / Fields" sequence="2" value="sys_translated"/>
+                <element label="Translated Text" sequence="3" value="sys_translated_text"/>
+                <element hint="sys_documentation table" label="Field Label" sequence="4" value="sys_documentation"/>
             </choice>
         </element>
         <element default="true" label="Update Custom Messages Only" max_length="40" name="update_custom_messages_only" type="boolean"/>
         <element label="Working Table" max_length="40" name="working_table" read_only="true" type="string"/>
         <index name="index">
+            <element name="current_languages"/>
+        </index>
+        <index name="index2">
             <element name="inactive_languages"/>
+        </index>
+        <index name="index3">
+            <element name="applications"/>
         </index>
     </element>
 </database>

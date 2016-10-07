@@ -6,26 +6,6 @@
             <element>available_languages</element>
             <hint/>
             <inactive>false</inactive>
-            <label>French</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>100</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-09-19 20:02:52</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>e4dac1901386e2001cdf5aef3244b0ef</sys_id>
-            <sys_mod_count>4</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-09-19 20:09:06</sys_updated_on>
-            <u_translation_log_id/>
-            <value>fr</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>available_languages</element>
-            <hint/>
-            <inactive>false</inactive>
             <label>English</label>
             <language>en</language>
             <name>x_snc_message_tran_message_translator_table</name>
@@ -48,7 +28,7 @@
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2016-09-19 20:02:29</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>6cdacd501386e2001cdf5aef3244b011</sys_id>
+            <sys_id>bf84f042139a6a001cdf5aef3244b065</sys_id>
             <sys_mod_count>20</sys_mod_count>
             <sys_name>available_languages</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>

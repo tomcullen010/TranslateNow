@@ -6,7 +6,7 @@
             <element>result</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Pending</label>
+            <label>Error</label>
             <language>en</language>
             <name>x_snc_message_tran_message_translator_table</name>
             <sequence>0</sequence>
@@ -14,50 +14,10 @@
             <sys_created_on>2016-09-30 13:27:07</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>0cd914ff1342e6001cdf5aef3244b0a2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-09-30 13:27:07</sys_updated_on>
-            <u_translation_log_id/>
-            <value>Pending</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>result</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Success</label>
-            <language>en</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>1</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-09-30 13:27:07</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>80d914ff1342e6001cdf5aef3244b0a3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-09-30 13:27:07</sys_updated_on>
-            <u_translation_log_id/>
-            <value>Success</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>result</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Error</label>
-            <language>en</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>2</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-09-30 13:27:07</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
             <sys_id>84d914ff1342e6001cdf5aef3244b0a3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-09-30 13:27:07</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-10-07 16:06:34</sys_updated_on>
             <u_translation_log_id/>
             <value>Error</value>
         </sys_choice>
@@ -68,7 +28,7 @@
             <sys_created_by>dave.knight</sys_created_by>
             <sys_created_on>2016-09-30 13:27:07</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>ccd914ff1342e6001cdf5aef3244b0a2</sys_id>
+            <sys_id>9938b482139a6a001cdf5aef3244b03f</sys_id>
             <sys_mod_count>31</sys_mod_count>
             <sys_name>result</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>

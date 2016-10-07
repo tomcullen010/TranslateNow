@@ -15,7 +15,7 @@
         <mobile_title>Google Translate</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name/>
-        <order>500</order>
+        <order>430</order>
         <override_menu_roles>false</override_menu_roles>
         <query>system_properties_ui.do?sysparm_title=Google%20Translate%20Properties&amp;sysparm_category=Google%20Translate</query>
         <report/>
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5f5acfd4135ee6001cdf5aef3244b0e9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Google Translate Properties</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -37,8 +37,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_app_module_5f5acfd4135ee6001cdf5aef3244b0e9</sys_update_name>
-        <sys_updated_by>dave.knight</sys_updated_by>
-        <sys_updated_on>2016-10-02 15:36:14</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-10-07 18:38:57</sys_updated_on>
         <timeline_page/>
         <title>Google Translate Properties</title>
         <uncancelable>false</uncancelable>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="result" label="Result" language="en" table="x_snc_message_tran_message_translator_table">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>result</element>
+            <help>All work and no play makes Dave a dull boy.  Tom is already dull.</help>
+            <hint>All work and no play makes Dave a dull boy.  Tom is already dull.</hint>
+            <label>Result</label>
+            <language>en</language>
+            <name>x_snc_message_tran_message_translator_table</name>
+            <plural>All work and no play makes Dave a dull boy.  Tom is already dull.</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-10-07 14:36:20</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>d6cc6c0e135a6a001cdf5aef3244b035</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Result</sys_name>
+            <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_message_tran_message_translator_table_result_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-10-07 14:36:20</sys_updated_on>
+            <u_translation_log_id/>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
