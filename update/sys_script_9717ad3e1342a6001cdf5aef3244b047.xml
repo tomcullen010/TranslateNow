@@ -37,7 +37,8 @@
 	var msgCount = 0;
 	var dupCount = 0;
 	var toLanguage = current.current_languages.id.toString(); 
-	var toLanguageX = toLanguage + "_" + current.sys_id.toString();       
+	var toLanguageX = toLanguage + "_" + current.sys_id.toString(); 
+	var toLanguageXX = "XX";
 	
 	
 	try {
@@ -54,11 +55,15 @@
 	current.duplicate_message_skipped = dupCount;
 	current.translated_message_count = msgCount;
 	current.setWorkflow(false);
-	current.message_log =  msgCount + " messages translated from English to " + toLanguage + ".\n" +
-	"Please review and approve for accuracy.";
+	current.message_log =  msgCount + " messages translated from English to " + toLanguage + ".\n"; 
+	if (dupCount > 0) {
+		currrent.message_log += dupCount + " duplicate messages were found and skipped translation.\n";
+	}
+	current.message_log += 	"Please review and approve for accuracy.\n";
 	if (current.result == "Error")
 		current.message_log += "Note however that translations encountered an Error! " +
 	"Have an admin investigate the system logs.";
+	
 	
 	current.update();
 	
@@ -86,6 +91,7 @@
 
 function translationExists(currRec, toLanguage) {
 	
+	gs.info('In translation check .. ');
 	
 	// Keys that uniquely identify a translation
 	//
@@ -98,8 +104,9 @@ function translationExists(currRec, toLanguage) {
 	//   Translated Texts (sys_translated_text) - tablename, fieldname, documentkey
 	
 	var abort = false;
+	var bothTypes = toLanguage + "," + toLanguageXX;
 	var searchRec = new GlideRecord(currRec.getRecordClassName());
-	searchRec.addQuery('language', toLanguage);
+	searchRec.addQuery('language','IN', bothTypes);  
 	switch (currRec.getRecordClassName()) {
 		case "sys_ui_message":
 		searchRec.addQuery('key', currRec.key);
@@ -135,7 +142,7 @@ function translationExists(currRec, toLanguage) {
 	
 	searchRec.query();
 	if (searchRec.hasNext()) {
-		gs.info('Duplicate key found .. skipping this record');
+		gs.info('Duplicate key - skipping this record '+ toLanguageX  + ' -> ' +  current.translation_tables);
 		dupCount++;
 		return true;
 	}
@@ -230,7 +237,7 @@ function translateRec(currRec, toLanguage, toLanguageX) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9717ad3e1342a6001cdf5aef3244b047</sys_id>
-        <sys_mod_count>113</sys_mod_count>
+        <sys_mod_count>123</sys_mod_count>
         <sys_name>Translate Messages</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -239,7 +246,7 @@ function translateRec(currRec, toLanguage, toLanguageX) {
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_9717ad3e1342a6001cdf5aef3244b047</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-10-06 18:14:21</sys_updated_on>
+        <sys_updated_on>2016-10-07 09:24:49</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
