@@ -5,13 +5,13 @@
             <element>process_flow.xml</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>56b10546139a6a001cdf5aef3244b069</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>3bbafc5a139e6a001cdf5aef3244b00b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Process Flow">00981c7f1342e6001cdf5aef3244b04b</sys_ui_formatter>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>.begin_split</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>d6b10546139a6a001cdf5aef3244b069</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>bbbafc5a139e6a001cdf5aef3244b00b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -33,167 +33,209 @@
             <element>system_default_language</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>5ab10546139a6a001cdf5aef3244b069</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>3fbafc5a139e6a001cdf5aef3244b00b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_translate_count</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>bfbafc5a139e6a001cdf5aef3244b00b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>dab10546139a6a001cdf5aef3244b069</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>33bafc5a139e6a001cdf5aef3244b00c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>result</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>5eb10546139a6a001cdf5aef3244b069</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>b3bafc5a139e6a001cdf5aef3244b00c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>state</element>
-            <position>5</position>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>deb10546139a6a001cdf5aef3244b069</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>37bafc5a139e6a001cdf5aef3244b00c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>6</position>
+            <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>52b10546139a6a001cdf5aef3244b06a</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>b7bafc5a139e6a001cdf5aef3244b00c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>message_log</element>
-            <position>7</position>
+            <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>d2b10546139a6a001cdf5aef3244b06a</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>3bbafc5a139e6a001cdf5aef3244b00c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>notes</element>
-            <position>8</position>
+            <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>56b10546139a6a001cdf5aef3244b06a</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>bbbafc5a139e6a001cdf5aef3244b00c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>condition_buffer</element>
-            <position>9</position>
+            <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>d6b10546139a6a001cdf5aef3244b06a</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>3fbafc5a139e6a001cdf5aef3244b00c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
-            <position>10</position>
+            <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>5ab10546139a6a001cdf5aef3244b06a</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>bfbafc5a139e6a001cdf5aef3244b00c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>requested_message_count</element>
-            <position>11</position>
+            <position>12</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>dab10546139a6a001cdf5aef3244b06a</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>33bafc5a139e6a001cdf5aef3244b00d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>translated_message_count</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>b3bafc5a139e6a001cdf5aef3244b00d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>12</position>
+            <position>14</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>5eb10546139a6a001cdf5aef3244b06a</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>37bafc5a139e6a001cdf5aef3244b00d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>max_translate_count</element>
-            <position>13</position>
+            <element>duplicate_message_skipped</element>
+            <position>15</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:07:48</sys_created_on>
-            <sys_id>deb10546139a6a001cdf5aef3244b06a</sys_id>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>b7bafc5a139e6a001cdf5aef3244b00d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:07:48</sys_updated_on>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approved_message_count</element>
+            <position>16</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-10-08 10:15:49</sys_created_on>
+            <sys_id>3bbafc5a139e6a001cdf5aef3244b00d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="TranslateNOW" display_value="TranslateNOW" name="x_snc_message_tran_message_translator_table" sys_domain="global" view="Default view">f91a13801306e2001cdf5aef3244b0a0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-10-08 10:15:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
