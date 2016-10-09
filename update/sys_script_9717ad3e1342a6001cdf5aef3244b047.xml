@@ -36,8 +36,8 @@
 	
 	var msgCount = 0;
 	var dupCount = 0;
-	var toLanguage = current.current_languages.id.toString(); 
-	var toLanguageX = toLanguage + "_" + current.sys_id.toString(); 
+	var toLanguage = current.current_languages.id.toString();
+	var toLanguageX = toLanguage + "_" + current.sys_id.toString();
 	var toLanguageXX = "XX";
 	
 	
@@ -55,12 +55,15 @@
 	current.state = "Review";
 	current.duplicate_message_skipped = dupCount;
 	current.translated_message_count = msgCount;
-	current.setWorkflow(false);	
-	current.message_log =  msgCount + " messages translated from English to " + toLanguage + ".\n"; 	
+	current.setWorkflow(false);
+	current.message_log =  msgCount + " messages translated from English to " + toLanguage + ".\n";
 	if (dupCount > 0) {
 		current.message_log += dupCount + " duplicate message(s) found and skipped translation.\n" +
-			"Use ADMIN -> View system log for details.\n\n";
+		"Use ADMIN -> View system log for details.\n\n";
 	}
+	
+	// The following message MUST start with "Please review". Login in Translator
+	// Utils depends on it.
 	current.message_log += 	"Please review and approve for accuracy.\n";
 	if (current.result == "Error")
 		current.message_log += "Note however that translations encountered an Error! " +
@@ -93,13 +96,13 @@
 
 
 function translationExists(currRec, toLanguage, toLanguageXX) {
-		
+	
 	// Keys that uniquely identify a translation
 	//
 	//   For all, language and ...
 	//
 	//   Messages (sys_ui_message) - key
-	//   Translated Name/Fields (sys_translated) -  element, value
+	//   Translated Name/Fields (sys_translated) -  name, element, value
 	//   Field Labels (sys_documentation) - name, element
 	//   Choices (sys_choice) - name, element, value
 	//   Translated Texts (sys_translated_text) - tablename, fieldname, documentkey
@@ -108,34 +111,37 @@ function translationExists(currRec, toLanguage, toLanguageXX) {
 	var bothTypes = toLanguage + "," + toLanguageXX;
 	var dupeRecId = '';
 	var searchRec = new GlideRecord(currRec.getRecordClassName());
-	searchRec.addQuery('language','IN', bothTypes);  
+	searchRec.addQuery('language','IN', bothTypes);
 	switch (currRec.getRecordClassName()) {
 		case "sys_ui_message":
 		searchRec.addQuery('key', currRec.key);
 		dupeRecId = currRec.key;
 		break;
 		case "sys_translated":
-		searchRec.addQuery('element', currRec.element);	
+		searchRec.addQuery('element', currRec.element);
 		searchRec.addQuery('value', currRec.value);
-		dupeRecId = currRec.element + ',' + currRec.value;
+		searchRec.addQuery('name', currRec.name);
+		dupeRecId = (currRec.name ? currRec.name : "") + currRec.element + ',' + currRec.value;
 		break;
 		case "sys_documentation":
-		searchRec.addQuery('name', currRec.name);               
+		searchRec.addQuery('name', currRec.name);
 		searchRec.addQuery('element', currRec.element);
-		dupeRecId = currRec.name + ',' + currRec.element;	
+		dupeRecId = currRec.name + ',' + currRec.element;
 		break;
 		case "sys_choice":
 		searchRec.addQuery('name', currRec.name);
 		searchRec.addQuery('element', currRec.element);
 		searchRec.addQuery('value', currRec.value);
-		dupeRecId = currRec.name + ',' + currRec.element + ',' + currRec.value;	
+		dupeRecId = currRec.name + ',' + currRec.element + ',' + currRec.value;
 		break;
 		case "sys_translated_text":
-		searchRec.addQuery('documentkey', currRec.documentkey);	
 		searchRec.addQuery('fieldname', currRec.fieldname);
-    	var query = searchRec.addQuery('documentkey', currRec.documentkey);    //ask Dave about these fields ...
-	    query.addOrCondition('tablename', currRec.tablename);
-		dupeRecId = currRec.documentkey + ',' + currRec.fieldname + ',addOrCondition-' + currRec.tablename;	
+		searchRec.addQuery('tablename', currRec.tablename);
+		if (currRec.documentkey)
+			searchRec.addQuery('documentkey', currRec.documentkey);
+		
+		//ask Dave about these fields ... this is the reference without a class thing. We call them documenets. It is a document id (key in this particular case) and a documenet table. The id/key is a GUID that references a record. The table in which the record resides is called out by the document table (tablename in this case)
+		dupeRecId =  currRec.tablename + ',' + currRec.fieldname + ',' + (currRec.documentkey ? currRec.documentkey : "");
 		break;
 		default:
 		abort = true;
@@ -169,7 +175,7 @@ function translateRec(currRec, toLanguage, toLanguageX) {
 		// Required field translations...
 		//
 		//   Messages (sys_ui_message) - message
-		//   Translated Name/Fields (sys_translated) - label
+		//   Translated Name/Fields (sys_translated) - label, sys_name
 		//   Field Labels (sys_documentation) - label, plural, help, hint
 		//   Choices (sys_choice) - label, hint
 		//   Translated Texts (sys_translated_text) - value
@@ -183,7 +189,7 @@ function translateRec(currRec, toLanguage, toLanguageX) {
 		switch (current.translation_tables.toString()) {
 			// TODO: make 'from langauge' a variable
 			case "sys_ui_message":
-			currRec.message = gt.translate(toLanguage, currRec.message, "en");	
+			currRec.message = gt.translate(toLanguage, currRec.message, "en");
 			break;
 			case "sys_translated":
 			currRec.label = gt.translate(toLanguage, currRec.label, "en");
@@ -228,14 +234,14 @@ function translateRec(currRec, toLanguage, toLanguageX) {
 
 
 //function translate() {
-//	return "All work and no play makes Dave a dull boy.  Tom is already dull.";	
-//}
-
-
-					
-					
-					
-					]]></script>
+	//	return "All work and no play makes Dave a dull boy.  Tom is already dull.";
+	//}
+	
+	
+	
+	
+	
+	]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2016-09-27 17:17:44</sys_created_on>
@@ -243,7 +249,7 @@ function translateRec(currRec, toLanguage, toLanguageX) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9717ad3e1342a6001cdf5aef3244b047</sys_id>
-        <sys_mod_count>147</sys_mod_count>
+        <sys_mod_count>154</sys_mod_count>
         <sys_name>Translate Messages</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -251,8 +257,8 @@ function translateRec(currRec, toLanguage, toLanguageX) {
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_9717ad3e1342a6001cdf5aef3244b047</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-10-07 17:10:19</sys_updated_on>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-09 02:09:31</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

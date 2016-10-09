@@ -4,7 +4,7 @@
         <element choice="1" label="Applications" max_length="40" name="applications" reference="sys_ui_message" reference_key="Application" type="reference">
             <choice/>
         </element>
-        <element label="Approved Message Count" max_length="40" name="approved_message_count" read_only="true" type="integer"/>
+        <element label="Approved translation count" max_length="40" name="approved_message_count" read_only="true" type="integer"/>
         <element label="As of Date" max_length="40" name="as_of_date" type="glide_date"/>
         <element dependent="translation_tables" dependent_on_field="translation_tables" label="Conditions" max_length="4000" name="conditions" type="conditions" use_dependent_field="true"/>
         <element attributes="edge_encryption_enabled=true" label="Condition buffer" max_length="1000" name="condition_buffer" type="string"/>
@@ -12,33 +12,41 @@
             <choice/>
         </element>
         <element hint="Number of messages created or modified outside of the plugin messages" label="Custom Message Count" max_length="40" name="custom_messages" read_only="true" type="integer"/>
-        <element label="Duplicate Message Skipped" max_length="40" name="duplicate_message_skipped" read_only="true" type="integer"/>
+        <element hint="Translations skipped because the translated message already existed" label="Skipped translation count" max_length="40" name="duplicate_message_skipped" read_only="true" type="integer"/>
         <element hint="Google API Key" label="Google Translate API Key" max_length="40" name="google_translate_api_key" read_only="true" type="string"/>
         <element label="Google Translate (From) Language" max_length="40" name="google_translate_from_language" read_only="true" type="string"/>
         <element hint="To Activate a language plugin, select the language via Lookup.  Once selected, you can use the record edit to activate the plugin." label="Activate a Language" max_length="32" name="inactive_languages" reference="v_plugin" reference_qual="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" reference_qual_condition="nameSTARTSWITHi18N^nameLIKEtranslations^active=inactive^EQ" type="reference"/>
-        <element hint="Use Admin -&gt; Properties to change this value" label="Max Translate Count" max_length="40" name="max_translate_count" read_only="true" type="integer"/>
+        <element hint="Use Admin -&gt; Properties to change this value" label="Max translation count" max_length="40" name="max_translate_count" read_only="true" type="integer"/>
         <element default="Please select a table to translate, and a language to translate to." label="Status  log" max_length="800" name="message_log" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Notes" max_length="1000" name="notes" type="string"/>
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Process Time" max_length="40" name="process_time" type="glide_duration"/>
-        <element hint="This is display for testing only" label="Requested Message Count" max_length="40" name="requested_message_count" read_only="true" type="integer"/>
+        <element hint="This is display for testing only" label="Requested translation count" max_length="40" name="requested_message_count" read_only="true" type="integer"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Pending" hint="All work and no play makes Dave a dull boy.  Tom is already dull." label="Result" max_length="40" name="result" read_only="true" type="string">
             <choice>
+                <element label="anstehend" language="de" sequence="0" u_translation_log_id="de_68f19f161352aa001cdf5aef3244b0fb" value="Pending"/>
                 <element label="Erreur" language="fr" sequence="0" value="Error"/>
-                <element label="Error" sequence="0" value="Error"/>
+                <element label="Pending" sequence="0" value="Pending"/>
+                <element label="Erfolg" language="de" sequence="1" u_translation_log_id="de_68f19f161352aa001cdf5aef3244b0fb" value="Success"/>
+                <element label="Success" sequence="1" value="Success"/>
+                <element label="Error" sequence="2" value="Error"/>
+                <element label="Fehler" language="de" sequence="2" u_translation_log_id="de_68f19f161352aa001cdf5aef3244b0fb" value="Error"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Configure" label="State" max_length="40" name="state" read_only="true" type="string">
             <choice>
-                <element label="Achevée" language="fr" sequence="0" value="Complete"/>
                 <element label="Configure" sequence="0" value="Configure"/>
                 <element label="Review" sequence="1" value="Review"/>
+                <element label="Traduction" language="fr" sequence="2" u_translation_log_id="fr_49f38b121352aa001cdf5aef3244b0f9" value="Translation"/>
                 <element label="Translation" sequence="2" value="Translation"/>
+                <element label="Übersetzung" language="de" sequence="2" u_translation_log_id="de_ae744f121352aa001cdf5aef3244b0be" value="Translation"/>
+                <element label="Achevée" language="fr" sequence="3" value="Complete"/>
                 <element label="Complete" sequence="3" value="Complete"/>
+                <element label="Komplett" language="de" sequence="3" u_translation_log_id="de_ae744f121352aa001cdf5aef3244b0be" value="Complete"/>
             </choice>
         </element>
         <element label="Translate from language" max_length="40" name="system_default_language" read_only="true" type="string"/>
-        <element label="Translated Message Count" max_length="40" name="translated_message_count" read_only="true" type="integer"/>
+        <element label="Translation count" max_length="40" name="translated_message_count" read_only="true" type="integer"/>
         <element label="Translation End" max_length="40" name="translation_end" type="glide_date_time"/>
         <element label="Translation Start" max_length="40" name="translation_start" type="glide_date_time"/>
         <element choice="1" label="Table to translate" mandatory="true" max_length="40" name="translation_tables" type="string">

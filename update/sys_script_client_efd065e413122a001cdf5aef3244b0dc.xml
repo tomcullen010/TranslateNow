@@ -12,8 +12,9 @@
         <order/>
         <script><![CDATA[function onLoad() {
 	g_form.hideRelatedLists();
+	var message_type = g_form.getValue("translation_tables").toString();
+	
 	if (g_scratchpad.state == "Review" && !g_scratchpad.isComplete) {
-		var message_type = g_form.getValue("translation_tables").toString();
 		switch (message_type) {
 			case ("sys_ui_message"):
 			g_form.showRelatedList("REL:41fd11a413122a001cdf5aef3244b0de");
@@ -32,6 +33,24 @@
 			break;
 		}
 	}
+	
+	switch (message_type) {
+		case ("sys_ui_message"):
+		g_form.showRelatedList("REL:12a232da1312aa001cdf5aef3244b030");
+		break;
+		case ("sys_choice"):
+		g_form.showRelatedList("REL:a9e2b6da1312aa001cdf5aef3244b069");
+		break;
+		case ("sys_documentation"):
+		g_form.showRelatedList("REL:1bf2f6da1312aa001cdf5aef3244b084");
+		break;
+		case ("sys_translated"):
+		g_form.showRelatedList("REL:91133ada1312aa001cdf5aef3244b091");
+		break;
+		case ("sys_translated_text"):
+		g_form.showRelatedList("REL:1b337ada1312aa001cdf5aef3244b012");
+		break;
+	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>dave.knight</sys_created_by>
@@ -40,7 +59,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>efd065e413122a001cdf5aef3244b0dc</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>Display Review Lists</sys_name>
         <sys_overrides/>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -48,8 +67,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_client_efd065e413122a001cdf5aef3244b0dc</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-10-05 14:43:09</sys_updated_on>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-08 19:10:31</sys_updated_on>
         <table>x_snc_message_tran_message_translator_table</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

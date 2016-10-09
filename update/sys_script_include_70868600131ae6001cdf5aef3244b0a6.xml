@@ -12,10 +12,32 @@ TranslatorUtils.prototype = {
 	initialize: function() {
 	},
 	
+	approveTranslationRecord: function (current) {
+		
+		var lang = current.language.toString();
+		var transLogId = current.u_translation_log_id;
+		if (lang == 'XX') {
+			
+			var transLogTokenArray = transLogId.split("_");
+			if (transLogTokenArray.length != 2) {
+				gs.error('Bogus u_translation_log_id in ' + current.getRecordClassName() + ':' + current.sys_id);
+				return;
+			}
+			var translationRecordId = transLogTokenArray[1]; // Translation record ID
+			current.language = transLogTokenArray[0];
+			
+			// Must disable workflows, and only global context can do that.
+			new global.TranslatorHelper().updateWithoutWorkflow(current);
+			
+			this.updateStatusLog(translationRecordId, 1);
+		}
+	},
+	
 	isReviewComplete: function (translateRec) {
-
+		
 		var gr = new GlideRecord(translateRec.translation_tables);
 		gr.addQuery('u_translation_log_id', 'CONTAINS', translateRec.sys_id);
+		gr.addQuery('language', 'XX');
 		gr.query();
 		if (gr.hasNext()) {
 			return false;
@@ -26,15 +48,18 @@ TranslatorUtils.prototype = {
 	
 	updateStatusLog: function (translationRecordId, apprCount) {
 		
-	gs.info(' in TranslatorUtils - updateStatusLog ... recID: ' + translationRecordId + ' apprCount: ' + apprCount);
+		gs.info(' in TranslatorUtils - updateStatusLog ... recID: ' + translationRecordId + ' apprCount: ' + apprCount);
 		
-	// Update the translation record's status log
+		// Update the translation record's status log
 		var translationRec = new GlideRecord("x_snc_message_tran_message_translator_table");
 		if (translationRecordId && translationRec.get(translationRecordId)) {
-			gs.info("Updating log");
+			//gs.info("Updating log");
+			
+			var reviewIsComplete = this.isReviewComplete(translationRec);
+			
 			var logString = translationRec.message_log.toString();
 			if (logString.indexOf("approved") == -1) {
-				gs.info("New update to log");
+				//gs.info("New update to log");
 				// First time updating the status log.
 				// The word in the indexOf, approved, must be in the new line below
 				var newLine = apprCount + " translations approved.";
@@ -42,8 +67,9 @@ TranslatorUtils.prototype = {
 				translationRec.approved_message_count = apprCount;
 			}
 			else {
-				gs.info("Refresh of log");
+				//gs.info("Refresh of log");
 				// The number of approvals MUST BE first on last line
+				// "Please review and approve for accuracy." must be the second line
 				var logLines = logString.split("\n");
 				var approvalLogTokenArray = logLines[logLines.length -1].split(" ");
 				var approvalCount = parseInt(approvalLogTokenArray[0]);
@@ -51,14 +77,26 @@ TranslatorUtils.prototype = {
 				approvalLogTokenArray[0] = approvalCount;
 				var approvalLogString = approvalLogTokenArray.join(" ");
 				logLines[logLines.length -1] = approvalLogString;
+				if (reviewIsComplete) {
+					for (var x = 0; x < logLines.length; x++) {
+						if (logLines[x].indexOf("Please review") != -1) {
+							if (logLines[x+1] && logLines[x+1] == "")
+								logLines.splice(x, 2);
+							else
+								logLines.splice(x, 1); // Remove Please review message
+						}
+					}
+				}
 				logString = logLines.join("\n");
 				translationRec.approved_message_count = approvalCount;
 			}
 			gs.info('before update .. transrec approved count = ' + translationRec.approved_message_count);
 			translationRec.message_log = logString;
+			if (reviewIsComplete)
+				translationRec.state = "Complete";
 			translationRec.setWorkflow(false);
 			translationRec.update();
-
+			
 		}
 	},
 	
@@ -125,14 +163,14 @@ TranslatorUtils.prototype = {
         <sys_created_on>2016-10-01 16:07:36</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>70868600131ae6001cdf5aef3244b0a6</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name>TranslatorUtils</sys_name>
         <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
         <sys_update_name>sys_script_include_70868600131ae6001cdf5aef3244b0a6</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-10-08 11:50:46</sys_updated_on>
+        <sys_updated_by>dave.knight</sys_updated_by>
+        <sys_updated_on>2016-10-08 23:41:03</sys_updated_on>
     </sys_script_include>
 </record_update>

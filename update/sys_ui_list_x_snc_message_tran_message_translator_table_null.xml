@@ -4,152 +4,137 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
+            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">05f59a921312aa001cdf5aef3244b037</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>56620946139a6a001cdf5aef3244b0df</sys_id>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-08 16:54:19</sys_created_on>
+            <sys_id>09f59a921312aa001cdf5aef3244b037</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-08 16:54:19</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>applications</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
+            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">05f59a921312aa001cdf5aef3244b037</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>d6620946139a6a001cdf5aef3244b0df</sys_id>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-08 16:54:19</sys_created_on>
+            <sys_id>89f59a921312aa001cdf5aef3244b037</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-08 16:54:19</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>approved_message_count</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
+            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">05f59a921312aa001cdf5aef3244b037</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>5a620946139a6a001cdf5aef3244b0df</sys_id>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-08 16:54:19</sys_created_on>
+            <sys_id>0df59a921312aa001cdf5aef3244b037</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-08 16:54:19</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>as_of_date</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
+            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">05f59a921312aa001cdf5aef3244b037</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>da620946139a6a001cdf5aef3244b0df</sys_id>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-08 16:54:19</sys_created_on>
+            <sys_id>8df59a921312aa001cdf5aef3244b037</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
-        </sys_ui_list_element>
-        <sys_ui_list_element action="INSERT_OR_UPDATE">
-            <average_value>false</average_value>
-            <element>condition_buffer</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
-            <max_value>false</max_value>
-            <min_value>false</min_value>
-            <position>4</position>
-            <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>5e620946139a6a001cdf5aef3244b0df</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-08 16:54:19</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>conditions</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
+            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">05f59a921312aa001cdf5aef3244b037</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>5</position>
+            <position>4</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>de620946139a6a001cdf5aef3244b0df</sys_id>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-08 16:54:19</sys_created_on>
+            <sys_id>01f59a921312aa001cdf5aef3244b038</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-08 16:54:19</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>current_languages</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
+            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">05f59a921312aa001cdf5aef3244b037</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>6</position>
+            <position>5</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>52620946139a6a001cdf5aef3244b0e0</sys_id>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-08 16:54:19</sys_created_on>
+            <sys_id>81f59a921312aa001cdf5aef3244b038</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-08 16:54:19</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>custom_messages</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
+            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">05f59a921312aa001cdf5aef3244b037</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>7</position>
+            <position>6</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>d2620946139a6a001cdf5aef3244b0e0</sys_id>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-08 16:54:19</sys_created_on>
+            <sys_id>05f59a921312aa001cdf5aef3244b038</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-08 16:54:19</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>duplicate_message_skipped</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
+            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">05f59a921312aa001cdf5aef3244b037</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>8</position>
+            <position>7</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>56620946139a6a001cdf5aef3244b0e0</sys_id>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-08 16:54:19</sys_created_on>
+            <sys_id>85f59a921312aa001cdf5aef3244b038</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-08 16:54:19</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>google_translate_api_key</element>
-            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">52620946139a6a001cdf5aef3244b0df</list_id>
+            <list_id display_value="x_snc_message_tran_message_translator_table" element="NULL" name="x_snc_message_tran_message_translator_table" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">05f59a921312aa001cdf5aef3244b037</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <position>9</position>
+            <position>8</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
-            <sys_id>d6620946139a6a001cdf5aef3244b0e0</sys_id>
+            <sys_created_by>dave.knight</sys_created_by>
+            <sys_created_on>2016-10-08 16:54:19</sys_created_on>
+            <sys_id>09f59a921312aa001cdf5aef3244b038</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
+            <sys_updated_by>dave.knight</sys_updated_by>
+            <sys_updated_on>2016-10-08 16:54:19</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -163,11 +148,11 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 16:10:49</sys_created_on>
+            <sys_created_on>2016-10-07 16:24:44</sys_created_on>
             <sys_customer_update>true</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>52620946139a6a001cdf5aef3244b0df</sys_id>
+            <sys_id>1e958586139a6a001cdf5aef3244b033</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_snc_message_tran_message_translator_table</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
@@ -176,8 +161,8 @@
             <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
             <sys_update_name>sys_ui_list_x_snc_message_tran_message_translator_table_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-07 16:10:49</sys_updated_on>
-            <sys_user/>
+            <sys_updated_on>2016-10-07 16:24:44</sys_updated_on>
+            <sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
         </sys_ui_list>
