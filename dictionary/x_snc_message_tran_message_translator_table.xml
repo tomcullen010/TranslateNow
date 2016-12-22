@@ -24,25 +24,17 @@
         <element hint="This is display for testing only" label="Requested translation count" max_length="40" name="requested_message_count" read_only="true" type="integer"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Pending" hint="All work and no play makes Dave a dull boy.  Tom is already dull." label="Result" max_length="40" name="result" read_only="true" type="string">
             <choice>
-                <element label="anstehend" language="de" sequence="0" u_translation_log_id="de_68f19f161352aa001cdf5aef3244b0fb" value="Pending"/>
-                <element label="Erreur" language="fr" sequence="0" value="Error"/>
                 <element label="Pending" sequence="0" value="Pending"/>
-                <element label="Erfolg" language="de" sequence="1" u_translation_log_id="de_68f19f161352aa001cdf5aef3244b0fb" value="Success"/>
                 <element label="Success" sequence="1" value="Success"/>
                 <element label="Error" sequence="2" value="Error"/>
-                <element label="Fehler" language="de" sequence="2" u_translation_log_id="de_68f19f161352aa001cdf5aef3244b0fb" value="Error"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" default="Configure" label="State" max_length="40" name="state" read_only="true" type="string">
             <choice>
                 <element label="Configure" sequence="0" value="Configure"/>
                 <element label="Review" sequence="1" value="Review"/>
-                <element label="Traduction" language="fr" sequence="2" u_translation_log_id="fr_49f38b121352aa001cdf5aef3244b0f9" value="Translation"/>
                 <element label="Translation" sequence="2" value="Translation"/>
-                <element label="Übersetzung" language="de" sequence="2" u_translation_log_id="de_ae744f121352aa001cdf5aef3244b0be" value="Translation"/>
-                <element label="Achevée" language="fr" sequence="3" value="Complete"/>
                 <element label="Complete" sequence="3" value="Complete"/>
-                <element label="Komplett" language="de" sequence="3" u_translation_log_id="de_ae744f121352aa001cdf5aef3244b0be" value="Complete"/>
             </choice>
         </element>
         <element label="Translate from language" max_length="40" name="system_default_language" read_only="true" type="string"/>
@@ -52,14 +44,9 @@
         <element choice="1" label="Table to translate" mandatory="true" max_length="40" name="translation_tables" type="string">
             <choice>
                 <element hint="sys_ui_message table" label="Messages" sequence="0" value="sys_ui_message"/>
-                <element hint="Table sys_ui_message" label="messages" language="fr" sequence="0" value="sys_ui_message"/>
                 <element hint="sys_choice table" label="Choice" sequence="1" value="sys_choice"/>
-                <element hint="table sys_choice" label="Choix" language="fr" sequence="1" value="sys_choice"/>
                 <element hint="sys_translated table" label="Name / Fields" sequence="2" value="sys_translated"/>
-                <element hint="Table sys_translated" label="Nom / Fields" language="fr" sequence="2" value="sys_translated"/>
-                <element label="texte Traduit" language="fr" sequence="3" value="sys_translated_text"/>
                 <element label="Translated Text" sequence="3" value="sys_translated_text"/>
-                <element hint="table sys_documentation" label="Étiquette de zone" language="fr" sequence="4" value="sys_documentation"/>
                 <element hint="sys_documentation table" label="Field Label" sequence="4" value="sys_documentation"/>
             </choice>
         </element>

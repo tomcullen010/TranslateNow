@@ -46,26 +46,6 @@
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Traduction</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>2</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-08 20:16:20</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>68348fde1312aa001cdf5aef3244b047</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2016-10-08 20:18:10</sys_updated_on>
-            <u_translation_log_id>fr_49f38b121352aa001cdf5aef3244b0f9</u_translation_log_id>
-            <value>Translation</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
             <label>Translation</label>
             <language>en</language>
             <name>x_snc_message_tran_message_translator_table</name>
@@ -80,46 +60,6 @@
             <sys_updated_on>2016-10-08 10:15:48</sys_updated_on>
             <u_translation_log_id/>
             <value>Translation</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Übersetzung</label>
-            <language>de</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>2</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-08 20:18:57</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>76c443121352aa001cdf5aef3244b03a</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-08 20:43:16</sys_updated_on>
-            <u_translation_log_id>de_ae744f121352aa001cdf5aef3244b0be</u_translation_log_id>
-            <value>Translation</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Achevée</label>
-            <language>fr</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>3</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2016-10-07 20:23:01</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>a02cbdc613da6a001cdf5aef3244b0b5</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-08 19:42:27</sys_updated_on>
-            <u_translation_log_id/>
-            <value>Complete</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -141,26 +81,6 @@
             <u_translation_log_id/>
             <value>Complete</value>
         </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Komplett</label>
-            <language>de</language>
-            <name>x_snc_message_tran_message_translator_table</name>
-            <sequence>3</sequence>
-            <sys_created_by>dave.knight</sys_created_by>
-            <sys_created_on>2016-10-08 20:18:57</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>32c443121352aa001cdf5aef3244b03b</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-08 20:42:51</sys_updated_on>
-            <u_translation_log_id>de_ae744f121352aa001cdf5aef3244b0be</u_translation_log_id>
-            <value>Complete</value>
-        </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>state</element>
             <name>x_snc_message_tran_message_translator_table</name>
@@ -169,15 +89,15 @@
             <sys_created_on>2016-09-30 05:05:32</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>04a4f042139a6a001cdf5aef3244b0e2</sys_id>
-            <sys_mod_count>59</sys_mod_count>
+            <sys_mod_count>72</sys_mod_count>
             <sys_name>state</sys_name>
             <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
             <sys_update_name>sys_choice_x_snc_message_tran_message_translator_table_state</sys_update_name>
-            <sys_updated_by>dave.knight</sys_updated_by>
-            <sys_updated_on>2016-10-08 20:46:04</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-10-10 14:47:26</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

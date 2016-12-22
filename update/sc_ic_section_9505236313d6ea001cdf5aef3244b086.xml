@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_ic_section">
+    <sc_ic_section action="INSERT_OR_UPDATE">
+        <index>0</index>
+        <label/>
+        <name>Section 1</name>
+        <sc_ic_item_staging display_value="Toms New Item">da93ef2313d6ea001cdf5aef3244b0bc</sc_ic_item_staging>
+        <sys_class_name>sc_ic_section</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-10-12 19:52:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9505236313d6ea001cdf5aef3244b086</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Section 0</sys_name>
+        <sys_package display_value="Message Translator" source="x_snc_message_tran">c417988c13cea2001cdf5aef3244b0a8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Message Translator">c417988c13cea2001cdf5aef3244b0a8</sys_scope>
+        <sys_update_name>sc_ic_section_9505236313d6ea001cdf5aef3244b086</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-10-12 19:52:09</sys_updated_on>
+    </sc_ic_section>
+    <sys_translated_text action="delete_multiple" query="documentkey=9505236313d6ea001cdf5aef3244b086"/>
+</record_update>
